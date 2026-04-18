@@ -372,8 +372,8 @@ function renderNews(newsData) {
 }
 
 function createNewsItem(item) {
-  const article = document.createElement("article");
-  article.className = "news-line-item";
+  const row = document.createElement("li");
+  row.className = "news-line-item";
 
   const link = document.createElement("a");
   link.className = "news-line-link";
@@ -394,8 +394,8 @@ function createNewsItem(item) {
   meta.textContent = formatDate(item.published_at);
 
   link.append(source, text, meta);
-  article.append(link);
-  return article;
+  row.append(link);
+  return row;
 }
 
 function buildCombinedNewsData(sourceResults) {

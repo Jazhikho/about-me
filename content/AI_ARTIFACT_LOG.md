@@ -40,6 +40,6 @@ Use this document to record future revisions to significant AI-assisted artifact
 | Input materials used | Existing site files, current itch feed integration, user-provided Patreon app credentials, Patreon API reference, and the public Patreon URL |
 | What AI produced | `scripts/sync_patreon_posts.py`, workflow updates, `content/patreon-posts.json`, and site changes to merge itch and Patreon items into one fixed-height latest-news list |
 | What the user accepted | Pending user review |
-| What the user rejected | None recorded yet |
-| What the user changed | User requested that the news display as a list of one-liners, five high, with newest items first |
+| What the user rejected | The initial card-like news presentation that still read as multi-line blocks |
+| What the user changed | User requested that the news display as a true one-line list, five visible rows high, with newest items first |
 | Final approval | Pending |
