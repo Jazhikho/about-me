@@ -29,3 +29,17 @@ Use this document to record future revisions to significant AI-assisted artifact
 | What the user rejected | None recorded yet |
 | What the user changed | Not recorded yet |
 | Final approval | Pending |
+
+## Patreon Feed And News List Refresh
+
+| Field | Value |
+| --- | --- |
+| Date | 2026-04-18 |
+| Model / tool used | Codex (GPT-5-based coding agent) |
+| Task purpose | Add Patreon public-post syncing and change the latest-news presentation from a ticker to a scrollable one-line list |
+| Input materials used | Existing site files, current itch feed integration, user-provided Patreon app credentials, Patreon API reference, and the public Patreon URL |
+| What AI produced | `scripts/sync_patreon_posts.py`, workflow updates, `content/patreon-posts.json`, and site changes to merge itch and Patreon items into one fixed-height latest-news list |
+| What the user accepted | Pending user review |
+| What the user rejected | None recorded yet |
+| What the user changed | User requested that the news display as a list of one-liners, five high, with newest items first |
+| Final approval | Pending |

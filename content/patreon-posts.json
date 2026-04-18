@@ -1,0 +1,73 @@
+{
+  "generated_at": "2026-04-18T22:17:13.535462+00:00",
+  "campaign": {
+    "id": "11339076",
+    "name": "Forging Realities",
+    "url": "https://www.patreon.com/forgewalkerstudios"
+  },
+  "items": [
+    {
+      "id": "154794191",
+      "campaign_name": "Forging Realities",
+      "campaign_url": "https://www.patreon.com/forgewalkerstudios",
+      "title": "RenWriter (A hint of things to come)",
+      "url": "https://www.patreon.com/posts/renwriter-hint-154794191",
+      "published_at": "2026-04-04T21:25:51.000+00:00",
+      "summary": "Like Visual Novels? Love Ren'Py? I am building an IDE for Ren'Py, which should be released within the next week or so as a beta. For more information and behind the scenes..."
+    },
+    {
+      "id": "154050898",
+      "campaign_name": "Forging Realities",
+      "campaign_url": "https://www.patreon.com/forgewalkerstudios",
+      "title": "StarGen v.0.8 (and last free update for a while)",
+      "url": "https://www.patreon.com/posts/stargen-v-0-8-154050898",
+      "published_at": "2026-03-27T03:48:06.000+00:00",
+      "summary": "StarGen V.0.8 is now released. I don't plan on releasing a public build for at least the next month, but any private builds will be posted here to Patreon. This will also be the..."
+    },
+    {
+      "id": "153841021",
+      "campaign_name": "Forging Realities",
+      "campaign_url": "https://www.patreon.com/forgewalkerstudios",
+      "title": "Free Tool - Relationship Overhead Calculator",
+      "url": "https://www.patreon.com/posts/free-tool-153841021",
+      "published_at": "2026-03-24T17:07:36.000+00:00",
+      "summary": "One of the things I've been playing with for a future game is the idea of modeling a relationship 'ecosystem', where NPCs act on their own in the background, and both their and..."
+    },
+    {
+      "id": "153772553",
+      "campaign_name": "Forging Realities",
+      "campaign_url": "https://www.patreon.com/forgewalkerstudios",
+      "title": "Announcing StarGen V0.8 (coming soon)",
+      "url": "https://www.patreon.com/posts/announcing-v0-8-153772553",
+      "published_at": "2026-03-23T21:15:37.000+00:00",
+      "summary": "StarGen v0.8 is coming soon! With this release, additional updates are getting ready to freeze for roughly the next month. While I will still be working on StarGen in the..."
+    },
+    {
+      "id": "153748635",
+      "campaign_name": "Forging Realities",
+      "campaign_url": "https://www.patreon.com/forgewalkerstudios",
+      "title": "Sprint 53 - Fashion Studio Game",
+      "url": "https://www.patreon.com/posts/sprint-53-studio-153748635",
+      "published_at": "2026-03-23T16:49:09.000+00:00",
+      "summary": "This term, I will be working with a student team (dubbed Sprint 53) on a Fashion Studio Game. More info to come as we get our game together. Please support us by following us on..."
+    },
+    {
+      "id": "152977522",
+      "campaign_name": "Forging Realities",
+      "campaign_url": "https://www.patreon.com/forgewalkerstudios",
+      "title": "Loot, Luck & Liability",
+      "url": "https://www.patreon.com/posts/loot-luck-152977522",
+      "published_at": "2026-03-13T21:32:13.000+00:00",
+      "summary": "Loot, Luck & Liability is a browser roguelite made for the St. Paddy\u2019s Roguelite Jam over on itch.io . A broker with a taste for clover keeps sending you into moonlit vaults, fae..."
+    },
+    {
+      "id": "152976481",
+      "campaign_name": "Forging Realities",
+      "campaign_url": "https://www.patreon.com/forgewalkerstudios",
+      "title": "Rebooting the Universe - An Introduction",
+      "url": "https://www.patreon.com/posts/rebooting-152976481",
+      "published_at": "2026-03-13T21:13:23.000+00:00",
+      "summary": "Who I am I am a Game Developer, just starting to stand up and create games to get my work and my name out there. What I make I make games that aim to be emotionally meaningful,..."
+    }
+  ]
+}

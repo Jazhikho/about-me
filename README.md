@@ -11,11 +11,13 @@ The site is designed for GitHub Pages and uses plain HTML, CSS, and minimal vani
 /styles/site.css
 /scripts/site.js
 /scripts/sync_itch_devlogs.py
+/scripts/sync_patreon_posts.py
 /.github/workflows/sync-itch-devlogs.yml
 /assets/branding/
 /assets/projects/
 /content/site-data.json
 /content/itch-devlog.json
+/content/patreon-posts.json
 /content/site-data.schema.json
 /content/AI_ARTIFACT_LOG.md
 /README.md
@@ -29,7 +31,7 @@ The page shell lives in [index.html](/D:/Website/index.html), the visual system 
 The renderer in [site.js](/D:/Website/scripts/site.js) loads `content/site-data.json` and fills the following areas:
 
 - Hero copy and quick strengths
-- Latest news ticker sourced from itch devlogs
+- Latest news list sourced from itch devlogs and Patreon public posts
 - About copy
 - Featured project cards
 - Additional work cards
@@ -65,6 +67,37 @@ python scripts/sync_itch_devlogs.py
 ```
 
 This updates `content/itch-devlog.json` locally.
+
+## Automatic Patreon public-post sync
+
+The site also includes a generated Patreon feed in [patreon-posts.json](/D:/Website/content/patreon-posts.json).
+
+It is produced by [sync_patreon_posts.py](/D:/Website/scripts/sync_patreon_posts.py), which:
+
+- Uses the Patreon API with your creator access token
+- Resolves the authenticated campaign automatically
+- Pulls recent posts from that campaign
+- Filters to public posts only
+- Writes a local JSON file for the site to render
+
+### GitHub Actions secret
+
+To enable Patreon syncing in GitHub Actions, add this repository secret:
+
+- `PATREON_CREATOR_ACCESS_TOKEN`
+
+The current workflow uses the creator access token directly and does not store Patreon secrets in the repository.
+
+If Patreon rotates or expires that token, generate a fresh creator access token from your Patreon client settings and update the GitHub secret.
+
+### Run the Patreon sync locally
+
+```powershell
+$env:PATREON_CREATOR_ACCESS_TOKEN="your-token"
+python scripts/sync_patreon_posts.py
+```
+
+This updates `content/patreon-posts.json` locally.
 
 ## How to edit project data
 
@@ -135,7 +168,8 @@ Then visit `http://localhost:8000/`.
 - Public project text should stay grounded in public-safe source material only.
 - The current research section is intentionally conservative and shows an empty-state message until there are public-safe talks or publications to add.
 - `og:image` is already set, but if you later know the final production URL you may also want to add `og:url` and a canonical tag in [index.html](/D:/Website/index.html).
-- The itch news section is generated. If it looks stale, run the sync workflow or the local Python sync script.
+- The latest-news section is generated from local JSON. If it looks stale, run the sync workflow or the local Python sync scripts.
+- If the Patreon feed stops updating, the most likely cause is an expired creator access token in the repository secrets.
 
 ## Content checklist
 

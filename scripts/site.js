@@ -1,5 +1,14 @@
 const dataUrl = "./content/site-data.json";
-const newsUrl = "./content/itch-devlog.json";
+const newsSources = [
+  {
+    key: "itch",
+    url: "./content/itch-devlog.json"
+  },
+  {
+    key: "patreon",
+    url: "./content/patreon-posts.json"
+  }
+];
 
 const elements = {
   title: document.querySelector("title"),
@@ -51,18 +60,25 @@ async function init() {
 }
 
 async function fetchNewsData() {
-  try {
-    const response = await fetch(newsUrl, { cache: "no-store" });
+  const results = await Promise.all(
+    newsSources.map(async (source) => {
+      try {
+        const response = await fetch(source.url, { cache: "no-store" });
 
-    if (!response.ok) {
-      return null;
-    }
+        if (!response.ok) {
+          return null;
+        }
 
-    return response.json();
-  } catch (error) {
-    console.warn("News feed unavailable", error);
-    return null;
-  }
+        const data = await response.json();
+        return { key: source.key, data };
+      } catch (error) {
+        console.warn(`${source.key} news feed unavailable`, error);
+        return null;
+      }
+    })
+  );
+
+  return buildCombinedNewsData(results.filter(Boolean));
 }
 
 function setupAnchorScroll() {
@@ -341,56 +357,123 @@ function renderLinks(container, links) {
 function renderNews(newsData) {
   elements.newsTickerTrack.replaceChildren();
 
-  if (!newsData?.items?.length) {
-    elements.newsMeta.textContent = "Recent devlog posts will appear here automatically.";
+  if (!newsData.items.length) {
+    elements.newsMeta.textContent = "Recent public updates will appear here automatically.";
     elements.newsEmpty.hidden = false;
-    elements.newsTickerTrack.classList.remove("is-animated");
     return;
   }
 
   elements.newsEmpty.hidden = true;
-  elements.newsMeta.textContent = `${newsData.discovered_projects.length} projects discovered • ${newsData.items.length} recent posts • Updated ${formatDateTime(newsData.generated_at)}`;
+  elements.newsMeta.textContent = buildNewsMeta(newsData);
 
-  const items = newsData.items.slice(0, 10);
-  const animated = items.length > 1;
-  const renderItems = animated ? [...items, ...items] : items;
-
-  renderItems.forEach((item, index) => {
-    elements.newsTickerTrack.append(createNewsItem(item, animated && index >= items.length));
+  newsData.items.slice(0, 20).forEach((item) => {
+    elements.newsTickerTrack.append(createNewsItem(item));
   });
-
-  elements.newsTickerTrack.classList.toggle("is-animated", animated);
 }
 
-function createNewsItem(item, clone = false) {
+function createNewsItem(item) {
   const article = document.createElement("article");
-  article.className = "news-item";
-
-  if (clone) {
-    article.setAttribute("aria-hidden", "true");
-  }
+  article.className = "news-line-item";
 
   const link = document.createElement("a");
-  link.className = "news-item-link";
+  link.className = "news-line-link";
   link.href = item.link;
   link.target = "_blank";
   link.rel = "noreferrer noopener";
 
-  const project = document.createElement("p");
-  project.className = "news-item-project";
-  project.textContent = item.project_title;
+  const source = document.createElement("span");
+  source.className = "news-line-source";
+  source.textContent = item.sourceLabel;
 
-  const title = document.createElement("h3");
-  title.className = "news-item-title";
-  title.textContent = item.title;
+  const text = document.createElement("span");
+  text.className = "news-line-text";
+  text.textContent = `${item.context}: ${item.title}`;
 
-  const meta = document.createElement("p");
-  meta.className = "news-item-meta";
-  meta.textContent = `${formatDate(item.published_at)} • ${item.summary}`;
+  const meta = document.createElement("span");
+  meta.className = "news-line-meta";
+  meta.textContent = formatDate(item.published_at);
 
-  link.append(project, title, meta);
+  link.append(source, text, meta);
   article.append(link);
   return article;
+}
+
+function buildCombinedNewsData(sourceResults) {
+  const combined = {
+    generatedAt: "",
+    items: [],
+    counts: {
+      itchProjects: 0,
+      itchPosts: 0,
+      patreonPosts: 0
+    }
+  };
+
+  sourceResults.forEach((sourceResult) => {
+    const { key, data } = sourceResult;
+    const generatedAt = data?.generated_at;
+
+    if (generatedAt && (!combined.generatedAt || generatedAt > combined.generatedAt)) {
+      combined.generatedAt = generatedAt;
+    }
+
+    if (key === "itch") {
+      combined.counts.itchProjects = data?.discovered_projects?.length ?? 0;
+      combined.counts.itchPosts = data?.items?.length ?? 0;
+
+      (data?.items ?? []).forEach((item) => {
+        combined.items.push({
+          sourceLabel: "itch.io",
+          context: item.project_title || "Devlog",
+          title: item.title || "Untitled update",
+          link: item.link,
+          published_at: item.published_at
+        });
+      });
+    }
+
+    if (key === "patreon") {
+      combined.counts.patreonPosts = data?.items?.length ?? 0;
+
+      (data?.items ?? []).forEach((item) => {
+        combined.items.push({
+          sourceLabel: "Patreon",
+          context: item.campaign_name || "Public post",
+          title: item.title || "Untitled post",
+          link: item.url,
+          published_at: item.published_at
+        });
+      });
+    }
+  });
+
+  combined.items.sort((left, right) => {
+    return (right.published_at || "").localeCompare(left.published_at || "");
+  });
+
+  return combined;
+}
+
+function buildNewsMeta(newsData) {
+  const parts = [];
+
+  if (newsData.counts.itchProjects) {
+    parts.push(`${newsData.counts.itchProjects} itch projects`);
+  }
+
+  if (newsData.counts.itchPosts) {
+    parts.push(`${newsData.counts.itchPosts} itch posts`);
+  }
+
+  if (newsData.counts.patreonPosts) {
+    parts.push(`${newsData.counts.patreonPosts} Patreon posts`);
+  }
+
+  if (newsData.generatedAt) {
+    parts.push(`Updated ${formatDateTime(newsData.generatedAt)}`);
+  }
+
+  return parts.join(" • ");
 }
 
 function getInitials(title) {

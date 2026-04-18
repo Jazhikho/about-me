@@ -1,4 +1,4 @@
-name: Sync Itch Devlogs
+name: Sync Public Feeds
 
 on:
   workflow_dispatch:
@@ -24,15 +24,20 @@ jobs:
       - name: Sync itch devlogs
         run: python scripts/sync_itch_devlogs.py
 
+      - name: Sync Patreon posts
+        env:
+          PATREON_CREATOR_ACCESS_TOKEN: ${{ secrets.PATREON_CREATOR_ACCESS_TOKEN }}
+        run: python scripts/sync_patreon_posts.py
+
       - name: Commit and push updates
         run: |
-          if git diff --quiet -- content/itch-devlog.json; then
-            echo "No devlog changes to commit."
+          if git diff --quiet -- content/itch-devlog.json content/patreon-posts.json; then
+            echo "No feed changes to commit."
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add content/itch-devlog.json
-          git commit -m "chore: sync itch devlogs"
+          git add content/itch-devlog.json content/patreon-posts.json
+          git commit -m "chore: sync public feeds"
           git push
