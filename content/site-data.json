@@ -2,7 +2,7 @@
   "site": {
     "seoTitle": "Jazhikho | Game Developer and Technical Designer",
     "brandName": "Jazhikho",
-    "heroEyebrow": "Public-facing portfolio",
+    "heroEyebrow": "Game development portfolio",
     "heroSummary": "Game developer, technical designer, tools and systems builder, and research-oriented creator working across procedural generation, reflective play, and public-facing experimentation.",
     "heroPanelText": "Public work centers on systems-driven design, procedural worldbuilding, and thoughtful framing around how games are made and why they matter.",
     "shortBio": "Jazhikho is a game developer and research-oriented creator focused on game systems, procedural generation, technical design, and reflective play.",
@@ -32,7 +32,7 @@
       "Research and analytical writing",
       "Ethical AI workflow awareness"
     ],
-    "footerNote": "Built as a lightweight static site for GitHub Pages. Public-safe by design: brand identity only, with no private resume details or personal contact information surfaced."
+    "footerNote": ""
   },
   "projects": [
     {
@@ -251,7 +251,7 @@
     }
   ],
   "research": {
-    "intro": "Current public-facing research is expressed more through project framing and systems experiments than through a formal publication list. The strongest throughlines are procedural worldbuilding, reflective design, simulation readability, and accountable development practice.",
+    "intro": "Research interests appear here through systems experiments, reflective design questions, and procedural-development work carried into public prototypes and releases.",
     "themes": [
       "Procedural worldbuilding as a repeatable design and production tool.",
       "Systems-driven structures that remain readable to players and collaborators.",
@@ -261,8 +261,8 @@
     ],
     "entries": [],
     "emptyState": {
-      "title": "No public talks or publications are listed yet.",
-      "body": "This section is intentionally conservative. Add conference talks, papers, showcases, or academic outputs only when there is a clearly public-safe title and link."
+      "title": "Research-facing work is currently represented through projects and prototype releases.",
+      "body": "Formal talks, papers, and publications can be added here as they become publicly available."
     }
   },
   "links": [

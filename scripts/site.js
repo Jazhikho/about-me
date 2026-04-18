@@ -16,7 +16,6 @@ const elements = {
   researchThemeList: document.getElementById("research-theme-list"),
   researchEntryList: document.getElementById("research-entry-list"),
   linkList: document.getElementById("link-list"),
-  footerNote: document.getElementById("footer-note"),
   loadStatus: document.getElementById("load-status")
 };
 
@@ -52,7 +51,6 @@ function renderSite(data) {
   elements.heroSummary.textContent = data.site.heroSummary;
   elements.heroPanelText.textContent = data.site.heroPanelText;
   elements.shortBio.textContent = data.site.shortBio;
-  elements.footerNote.textContent = data.site.footerNote;
   elements.researchIntro.textContent = data.research.intro;
 
   renderTextList(elements.heroTags, data.site.heroTags);

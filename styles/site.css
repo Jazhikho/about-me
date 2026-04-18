@@ -16,6 +16,7 @@
   --radius-md: 20px;
   --radius-sm: 14px;
   --site-width: min(1160px, calc(100vw - 2rem));
+  --anchor-offset: 7rem;
 }
 
 *,
@@ -26,6 +27,11 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+.hero-section[id],
+.content-section[id] {
+  scroll-margin-top: var(--anchor-offset);
 }
 
 body {
@@ -222,9 +228,10 @@ a {
 
 .hero-stamp {
   left: 50%;
-  top: 50%;
-  width: min(21rem, 72%);
-  transform: translate(-50%, -50%);
+  top: 1rem;
+  width: min(24rem, calc(100% - 2rem));
+  max-height: calc(100% - 6.5rem);
+  transform: translateX(-50%);
 }
 
 .footer-stamp {
@@ -587,9 +594,10 @@ h2 {
 }
 
 .footer-layout {
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr;
   position: relative;
   overflow: hidden;
+  justify-items: center;
   align-items: center;
   min-height: 180px;
   padding: 1.5rem;
@@ -599,9 +607,29 @@ h2 {
   box-shadow: var(--shadow);
 }
 
-.footer-note {
-  max-width: 40rem;
-  margin: 0.25rem 0 0;
+.footer-copy {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.footer-brand {
+  margin: 0;
+}
+
+.footer-email {
+  color: var(--accent-strong);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.footer-email:hover,
+.footer-email:focus-visible {
+  color: var(--text);
 }
 
 .load-status {
@@ -655,6 +683,10 @@ h2 {
 }
 
 @media (max-width: 760px) {
+  :root {
+    --anchor-offset: 10rem;
+  }
+
   .header-inner,
   .section-heading-row,
   .site-nav {
