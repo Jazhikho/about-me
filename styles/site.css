@@ -26,7 +26,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 
 .hero-section[id],
@@ -197,6 +197,7 @@ a {
 .hero-panel {
   display: flex;
   flex-direction: column;
+  align-items: center;
   overflow: hidden;
   min-height: 100%;
   padding: clamp(1.4rem, 3vw, 2rem);
@@ -209,6 +210,7 @@ a {
   position: relative;
   z-index: 1;
   margin-top: auto;
+  width: 100%;
   padding: 1.2rem 1.3rem;
   border-radius: var(--radius-md);
   background: rgba(15, 11, 10, 0.66);
@@ -229,8 +231,9 @@ a {
 .hero-stamp {
   left: 50%;
   top: 1rem;
-  width: min(24rem, calc(100% - 2rem));
-  max-height: calc(100% - 6.5rem);
+  width: auto;
+  height: calc(100% - 7rem);
+  max-width: calc(100% - 2rem);
   transform: translateX(-50%);
 }
 
@@ -274,7 +277,6 @@ h2 {
 .lead-text,
 .section-note,
 .panel-text,
-.footer-note,
 .empty-state {
   color: var(--muted);
 }
@@ -612,8 +614,11 @@ h2 {
   z-index: 1;
   display: flex;
   flex-direction: column;
+  justify-self: center;
   align-items: center;
   gap: 0.5rem;
+  width: 100%;
+  max-width: 32rem;
   text-align: center;
 }
 
@@ -622,6 +627,7 @@ h2 {
 }
 
 .footer-email {
+  display: inline-block;
   color: var(--accent-strong);
   font-weight: 600;
   text-decoration: none;

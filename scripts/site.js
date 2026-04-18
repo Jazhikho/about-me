@@ -2,6 +2,7 @@ const dataUrl = "./content/site-data.json";
 
 const elements = {
   title: document.querySelector("title"),
+  header: document.querySelector(".site-header"),
   heroEyebrow: document.getElementById("hero-eyebrow"),
   heroTitle: document.getElementById("hero-title"),
   heroSummary: document.getElementById("hero-summary"),
@@ -19,6 +20,7 @@ const elements = {
   loadStatus: document.getElementById("load-status")
 };
 
+setupAnchorScroll();
 init();
 
 async function init() {
@@ -39,6 +41,56 @@ async function init() {
     elements.heroSummary.textContent = "Portfolio content could not be loaded. Confirm that the site is being served over HTTP and that content/site-data.json is available.";
     setStatus("Content failed to load.", true);
   }
+}
+
+function setupAnchorScroll() {
+  updateAnchorOffset();
+  window.addEventListener("resize", updateAnchorOffset);
+
+  document.querySelectorAll('a[href^="#"]').forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const href = link.getAttribute("href");
+
+      if (!href || href === "#") {
+        return;
+      }
+
+      const target = document.querySelector(href);
+
+      if (!target) {
+        return;
+      }
+
+      event.preventDefault();
+      scrollToTarget(target);
+      history.replaceState(null, "", href);
+    });
+  });
+
+  window.addEventListener("load", () => {
+    if (window.location.hash) {
+      const target = document.querySelector(window.location.hash);
+
+      if (target) {
+        window.setTimeout(() => scrollToTarget(target), 0);
+      }
+    }
+  });
+}
+
+function updateAnchorOffset() {
+  const headerHeight = elements.header?.offsetHeight ?? 0;
+  document.documentElement.style.setProperty("--anchor-offset", `${headerHeight + 24}px`);
+}
+
+function scrollToTarget(target) {
+  const headerHeight = elements.header?.offsetHeight ?? 0;
+  const top = target.getBoundingClientRect().top + window.scrollY - headerHeight - 24;
+
+  window.scrollTo({
+    top: Math.max(top, 0),
+    behavior: "smooth"
+  });
 }
 
 function renderSite(data) {
