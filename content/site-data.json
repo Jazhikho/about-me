@@ -3,13 +3,13 @@
     "seoTitle": "Jazhikho | Game Developer and Technical Designer",
     "brandName": "Jazhikho",
     "heroEyebrow": "Game development portfolio",
-    "heroSummary": "Game developer, technical designer, tools and systems builder, and research-oriented creator working across procedural generation, reflective play, and public-facing experimentation.",
-    "heroPanelText": "Public work centers on systems-driven design, procedural worldbuilding, and thoughtful framing around how games are made and why they matter.",
-    "shortBio": "Jazhikho is a game developer and research-oriented creator focused on game systems, procedural generation, technical design, and reflective play.",
+    "heroSummary": "I make games, tools, and design experiments centered on procedural generation, technical systems, and reflective play.",
+    "heroPanelText": "My work tends to live where systems design, worldbuilding, and thoughtful player experience overlap.",
+    "shortBio": "I am a game developer and research-oriented creator focused on game systems, procedural generation, technical design, and reflective play.",
     "aboutParagraphs": [
-      "Their public work spans playable games, atmospheric prototypes, and developer-facing tools. Across those formats, the throughline is a hybrid practice: technical systems built in service of tone, pacing, readability, and meaning rather than complexity for its own sake.",
-      "The portfolio leans into procedural worldbuilding, tools development, and systems thinking, with public strengths in C#, Godot, Unity, Python, UI and UX awareness, and interdisciplinary design. It also reflects an ongoing interest in research and analytical writing as part of development rather than something separate from it.",
-      "Where AI-assisted workflows are part of the process, the emphasis stays on intentional use, clear provenance, and human accountability. Public materials foreground the work itself, the tools behind it, and the design questions it is trying to answer."
+      "My public work includes playable games, atmospheric prototypes, and developer-facing tools. Across all of it, the common thread is pretty simple: I like building technical systems that support tone, pacing, clarity, and meaning instead of existing just to be complicated.",
+      "A lot of what I do sits around procedural worldbuilding, tools development, and systems thinking, with a technical background in C#, Godot, Unity, Python, and UI and UX-aware design. I also like treating research and analytical writing as part of development rather than something that only happens after the fact.",
+      "When AI-assisted workflows are part of the process, I approach them intentionally. I care about provenance, clear boundaries, and staying accountable for the final work, so the focus stays on what I am making, why I am making it, and how the tools fit into that."
     ],
     "heroTags": [
       "C#",
@@ -39,8 +39,8 @@
       "slug": "stargen",
       "title": "StarGen",
       "shortPitch": "Procedurally generated galaxy and star-system tooling for automated worldbuilding.",
-      "description": "A Godot-based tool for generating galaxies, star systems, and celestial objects with seed-based determinism, 3D viewers, save and load support, and a strong emphasis on repeatable generation.",
-      "longDescription": "StarGen explores procedural worldbuilding as a serious tool-making practice rather than a novelty feature. The public build highlights galaxy-scale generation, system inspection, jump-route prototyping, and reliability-oriented iteration.",
+      "description": "I built StarGen in Godot as a worldbuilding tool for generating galaxies, star systems, and celestial objects with seeded determinism, 3D viewers, and repeatable results.",
+      "longDescription": "StarGen is where a lot of my procedural worldbuilding interests come together. It treats generation as a design tool I can return to, inspect, and expand rather than a one-off gimmick.",
       "role": "Solo developer and systems/tool designer",
       "techTools": [
         "Godot",
@@ -70,8 +70,8 @@
       "slug": "project-harvest",
       "title": "Project Harvest",
       "shortPitch": "A first-person psychological horror roguelite about identity, complicity, and how players treat the bodies they control.",
-      "description": "Built in Godot, Project Harvest uses a shifting corn maze, repeated runs, and layered notes to turn the player-avatar relationship into the core design question rather than background theme.",
-      "longDescription": "This project ties atmospheric horror to reflective design intent. It frames replay and failure as part of the argument, using structure and tone to ask what responsibility players and developers carry inside a game system.",
+      "description": "I built Project Harvest in Godot as a psychological horror roguelite that uses repetition, atmosphere, and player choice to keep the relationship between player and avatar front and center.",
+      "longDescription": "Project Harvest is one of the clearest examples of how I like to approach reflective design. The structure, failures, and tone all work together to ask what responsibility we carry inside a game system.",
       "role": "Solo developer",
       "techTools": [
         "Godot",
@@ -101,8 +101,8 @@
       "slug": "relationship-overhead-tool",
       "title": "Relationship Overhead Tool",
       "shortPitch": "A relationship simulation sandbox for testing whether nuanced social systems can remain computationally lightweight.",
-      "description": "A prototype design and benchmarking tool that models social bonds across multiple dimensions while tracking performance, inspection views, and social ripple effects through a wider network.",
-      "longDescription": "The tool serves both as a systems sandbox and as a technical proof of concept. It focuses on layered relationship states, simulation readability, and measurable overhead instead of a single abstract relationship meter.",
+      "description": "I made this as a simulation and benchmarking tool for testing whether a nuanced relationship system could stay readable and computationally lightweight at the same time.",
+      "longDescription": "This project works as both a systems sandbox and a proof of concept. It is my way of exploring social simulation with more texture than a single relationship meter, without letting the overhead get out of hand.",
       "role": "Solo developer and systems researcher",
       "techTools": [
         "HTML5",
@@ -132,8 +132,8 @@
       "slug": "loot-luck-liability",
       "title": "Loot, Luck & Liability",
       "shortPitch": "A browser roguelite about risky runs, cursed treasure, and luck as both mechanic and punchline.",
-      "description": "A jam-built browser roguelite with dungeon runs, progression between attempts, and localization-aware writing that adapts its tone across multiple languages.",
-      "longDescription": "The public release foregrounds readable systems, fast iteration, and language support in a jam-scale format. It pairs humor with persistence mechanics, light economy design, and browser-friendly delivery.",
+      "description": "I built this browser roguelite around fast runs, light progression, and a playful tone that still leaves room for solid systems work under the hood.",
+      "longDescription": "Loot, Luck & Liability let me lean into humor, quick iteration, and localization while still building a game with clear progression and readable moving parts.",
       "role": "Solo developer",
       "techTools": [
         "React",
@@ -163,8 +163,8 @@
       "slug": "private-eye-pierce",
       "title": "Private Eye Pierce & The Ink Spill",
       "shortPitch": "A comic-noir point-and-click adventure where grayscale routine gives way to surreal color and mystery.",
-      "description": "A collaborative Unity prototype focused on atmosphere, character, and narrative puzzles, designed as a vertical slice rather than a difficulty-forward adventure.",
-      "longDescription": "The project emphasizes tone, environmental storytelling, and believable puzzle framing. Its visual identity leans on monochrome contrast and carefully placed bursts of color.",
+      "description": "This collaborative Unity prototype focuses on atmosphere, character, and story-driven puzzle design more than raw difficulty.",
+      "longDescription": "What I like most about this project is its tone. It uses environmental storytelling, monochrome contrast, and small surreal details to build a strong identity without overcomplicating the experience.",
       "role": "Co-developer and collaborator",
       "techTools": [
         "Unity",
@@ -193,8 +193,8 @@
       "slug": "warp-engineer",
       "title": "Warp Engineer",
       "shortPitch": "A browser puzzle about stabilizing a warp bubble by tuning harmonics under pressure.",
-      "description": "A systems-tuning prototype about field coherence, hull stress, and managing multiple generators during interstellar travel.",
-      "longDescription": "Its public page makes AI provenance explicit, which is relevant to the broader portfolio stance on accountable workflow disclosure. The game itself centers on readable feedback and calibration under changing conditions.",
+      "description": "This is a systems-tuning prototype about stabilizing a warp bubble by managing harmonics, coherence, and pressure under changing conditions.",
+      "longDescription": "Warp Engineer is a small project, but it lines up with a lot of what I care about: readable feedback, technical framing, and being honest about process and provenance when AI tools are part of the workflow.",
       "role": "Concept direction and public release ownership",
       "techTools": [
         "HTML5",
@@ -223,8 +223,8 @@
       "slug": "manual-override",
       "title": "Manual Override",
       "shortPitch": "An unfinished experimental prototype about what happens when trust in AI systems goes too far.",
-      "description": "A GDevelop jam prototype framed around AI risk, misalignment, and the narrative consequences of over-trusting automated systems.",
-      "longDescription": "Manual Override reads as an experimental concept piece: rough, direct, and explicitly linked to current AI-safety discourse rather than presented as a polished commercial release.",
+      "description": "I built this jam prototype around AI risk, misalignment, and what can happen when people hand off too much judgment to automated systems.",
+      "longDescription": "Manual Override is rough around the edges by design and circumstance, but it is also a direct expression of one of my recurring interests: how technical systems shape trust, control, and responsibility.",
       "role": "Solo developer",
       "techTools": [
         "GDevelop",
@@ -251,35 +251,35 @@
     }
   ],
   "research": {
-    "intro": "Research interests appear here through systems experiments, reflective design questions, and procedural-development work carried into public prototypes and releases.",
+    "intro": "A lot of my research interests show up through systems experiments, reflective design questions, and procedural-development work that makes its way into public prototypes and releases.",
     "themes": [
-      "Procedural worldbuilding as a repeatable design and production tool.",
-      "Systems-driven structures that remain readable to players and collaborators.",
-      "Reflective and eudaimonic design questions in interactive form.",
-      "Research-informed development that treats implementation and analysis as part of the same practice.",
-      "AI-assisted workflow awareness with explicit interest in provenance, bounded use, and human accountability."
+      "Using procedural worldbuilding as a repeatable design and production tool.",
+      "Building systems-driven structures that still stay readable to players and collaborators.",
+      "Exploring reflective and eudaimonic design questions through playable work.",
+      "Treating implementation and analysis as part of the same development practice.",
+      "Thinking carefully about AI-assisted workflows, provenance, bounded use, and accountability."
     ],
     "entries": [],
     "emptyState": {
-      "title": "Research-facing work is currently represented through projects and prototype releases.",
-      "body": "Formal talks, papers, and publications can be added here as they become publicly available."
+      "title": "Right now, the research side of my work is mostly represented through projects and prototypes.",
+      "body": "Formal talks, papers, and publications can be added here as more of that work becomes public."
     }
   },
   "links": [
     {
       "label": "itch.io",
       "url": "https://jazhikho.itch.io/",
-      "description": "Primary public hub for playable releases, tools, prototypes, and dev-facing experiments."
+      "description": "My main public hub for games, tools, prototypes, and other playable work."
     },
     {
       "label": "ArtStation",
       "url": "https://jazhikho.artstation.com/",
-      "description": "Public art and visual portfolio presence under the Jazhikho identity."
+      "description": "Where I post public art and visual work under the Jazhikho name."
     },
     {
       "label": "Patreon / ForgeWalker Studios",
       "url": "https://www.patreon.com/forgewalkerstudios",
-      "description": "Public support page connected to ongoing creative development."
+      "description": "A public support page tied to my ongoing creative work."
     }
   ]
 }
