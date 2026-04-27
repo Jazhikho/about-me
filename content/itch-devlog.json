@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-26T19:13:47.169924+00:00",
+  "generated_at": "2026-04-27T03:59:45.109085+00:00",
   "source_profile_url": "https://jazhikho.itch.io/",
   "discovered_projects": [
     {
@@ -58,6 +58,15 @@
     }
   ],
   "items": [
+    {
+      "project_title": "StarGen",
+      "project_slug": "stargen",
+      "project_url": "https://jazhikho.itch.io/stargen",
+      "title": "0.9d release and FDG 26",
+      "link": "https://jazhikho.itch.io/stargen/devlog/1500729/09d-release-and-fdg-26",
+      "published_at": "2026-04-26T20:49:20+00:00",
+      "summary": "Now available for download, StarGen 0.9d! I have already said much about its release, so I won\u2019t labor the point here. However, I have some exciting news! The 2026 Foundations of\u2026"
+    },
     {
       "project_title": "StarGen",
       "project_slug": "stargen",
