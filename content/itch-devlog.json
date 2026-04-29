@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-29T04:02:49.642676+00:00",
+  "generated_at": "2026-04-29T08:34:04.022801+00:00",
   "source_profile_url": "https://jazhikho.itch.io/",
   "discovered_projects": [
     {
@@ -59,13 +59,67 @@
   ],
   "items": [
     {
-      "project_title": "Loot, Luck & Liability",
-      "project_slug": "loot-luck-liability",
-      "project_url": "https://jazhikho.itch.io/loot-luck-liability",
-      "title": "New Game! Announcing Loot, Luck, and Liability!",
-      "link": "https://jazhikho.itch.io/loot-luck-liability/devlog/1453882/new-game-announcing-loot-luck-and-liability",
-      "published_at": "2026-03-10T03:39:44+00:00",
-      "summary": "Announcing the release of Loot, Luck & Liability. This is a silly game that I made ~48 hours for St. Paddy\u2019s Roguelite Game Jam. Based on feedback, I will be updating this game\u2026"
+      "project_title": "StarGen",
+      "project_slug": "stargen",
+      "project_url": "https://jazhikho.itch.io/stargen",
+      "title": "0.9d release and FDG 26",
+      "link": "https://jazhikho.itch.io/stargen/devlog/1500729/09d-release-and-fdg-26",
+      "published_at": "2026-04-26T20:49:20+00:00",
+      "summary": "Now available for download, StarGen 0.9d! I have already said much about its release, so I won\u2019t labor the point here. However, I have some exciting news! The 2026 Foundations of\u2026"
+    },
+    {
+      "project_title": "StarGen",
+      "project_slug": "stargen",
+      "project_url": "https://jazhikho.itch.io/stargen",
+      "title": "0.9d is here!",
+      "link": "https://jazhikho.itch.io/stargen/devlog/1496901/09d-is-here",
+      "published_at": "2026-04-22T19:45:41+00:00",
+      "summary": "0.9d has been released on my Patreon ! I will be dropping the build here on itch.io within the next week, but you can access it now if you sign up!..."
+    },
+    {
+      "project_title": "StarGen",
+      "project_slug": "stargen",
+      "project_url": "https://jazhikho.itch.io/stargen",
+      "title": "v0.9 discussion",
+      "link": "https://jazhikho.itch.io/stargen/devlog/1487867/v09-discussion",
+      "published_at": "2026-04-12T19:55:39+00:00",
+      "summary": "So, I\u2019m still working on StarGen even though here on itch, the progress is frozen. I am limiting the scope a bit regarding detail; Concept Atlas will be moving to a different\u2026"
+    },
+    {
+      "project_title": "StarGen",
+      "project_slug": "stargen",
+      "project_url": "https://jazhikho.itch.io/stargen",
+      "title": "Aaaaaand, it's here!",
+      "link": "https://jazhikho.itch.io/stargen/devlog/1470375/aaaaaand-its-here",
+      "published_at": "2026-03-27T01:45:29+00:00",
+      "summary": "It is here, the showcase version of StarGen. As for my release schedule: there will be no further release builds while development is frozen until late April or early May\u2014bug\u2026"
+    },
+    {
+      "project_title": "StarGen",
+      "project_slug": "stargen",
+      "project_url": "https://jazhikho.itch.io/stargen",
+      "title": "Attention: Incoming Update!",
+      "link": "https://jazhikho.itch.io/stargen/devlog/1467530/attention-incoming-update",
+      "published_at": "2026-03-23T21:10:20+00:00",
+      "summary": "StarGen v0.8 is coming soon! With this release, additional updates are getting ready to freeze for roughly the next month. While I will still be working on StarGen in the\u2026"
+    },
+    {
+      "project_title": "StarGen",
+      "project_slug": "stargen",
+      "project_url": "https://jazhikho.itch.io/stargen",
+      "title": "Update on updates",
+      "link": "https://jazhikho.itch.io/stargen/devlog/1459677/update-on-updates",
+      "published_at": "2026-03-15T19:27:00+00:00",
+      "summary": "Thank you to those who have taken the time to check out this program! I am about to enter my final term in school. In the coming weeks, I will be working on both my Thesis\u2026"
+    },
+    {
+      "project_title": "StarGen",
+      "project_slug": "stargen",
+      "project_url": "https://jazhikho.itch.io/stargen",
+      "title": "v0.5 release",
+      "link": "https://jazhikho.itch.io/stargen/devlog/1456772/v05-release",
+      "published_at": "2026-03-13T15:36:28+00:00",
+      "summary": "I\u2019m not sure what happened to the v0.4 version, but it was never released anywhere. I decided not to make a big deal about it and just go ahead and release 0.5 instead. This\u2026"
     },
     {
       "project_title": "Project Harvest",
@@ -75,6 +129,24 @@
       "link": "https://jazhikho.itch.io/project-harvest/devlog/1452274/16-release-and-why-its-not-20",
       "published_at": "2026-03-08T15:00:54+00:00",
       "summary": "So, I pushed what I think will be the Final release (for now) of this game. And it\u2019s a 1.6 release, not a 2.0 release. I didn\u2019t end up changing the game play despite wanting to\u2026"
+    },
+    {
+      "project_title": "StarGen",
+      "project_slug": "stargen",
+      "project_url": "https://jazhikho.itch.io/stargen",
+      "title": "StarGen v0.3.0",
+      "link": "https://jazhikho.itch.io/stargen/devlog/1450586/stargen-v030",
+      "published_at": "2026-03-06T20:27:49+00:00",
+      "summary": "StarGen 0.3.0 release! I\u2019ve added a few new features, like the ability to create celestial objects and systems directly. The program has been refactored in C#, which should\u2026"
+    },
+    {
+      "project_title": "StarGen",
+      "project_slug": "stargen",
+      "project_url": "https://jazhikho.itch.io/stargen",
+      "title": "V.0.2",
+      "link": "https://jazhikho.itch.io/stargen/devlog/1430153/v02",
+      "published_at": "2026-02-28T14:50:33+00:00",
+      "summary": "I\u2019ve been working on improving StarGen; one of the immediate things I wanted to tackle was the asteroid belts, since they weren\u2019t displaying properly. There are still issues\u2026"
     },
     {
       "project_title": "Project Harvest",
