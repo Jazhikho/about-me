@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T13:48:23.947546+00:00",
+  "generated_at": "2026-05-02T19:17:39.975943+00:00",
   "source_profile_url": "https://jazhikho.itch.io/",
   "discovered_projects": [
     {
@@ -58,6 +58,15 @@
     }
   ],
   "items": [
+    {
+      "project_title": "StarGen",
+      "project_slug": "stargen",
+      "project_url": "https://jazhikho.itch.io/stargen",
+      "title": "v.0.10 released (Back on a weekly release schedule)",
+      "link": "https://jazhikho.itch.io/stargen/devlog/1508065/v010-released-back-on-a-weekly-release-schedule",
+      "published_at": "2026-05-02T16:03:20+00:00",
+      "summary": "V.0.10.0 is mostly a science hardening pass - there isn\u2019t much that you will see different, but as I move closer to V.1.0, scientific accuracy will become more important. I have\u2026"
+    },
     {
       "project_title": "StarGen",
       "project_slug": "stargen",
@@ -156,15 +165,6 @@
       "link": "https://jazhikho.itch.io/stargen/devlog/1430153/v02",
       "published_at": "2026-02-28T14:50:33+00:00",
       "summary": "I\u2019ve been working on improving StarGen; one of the immediate things I wanted to tackle was the asteroid belts, since they weren\u2019t displaying properly. There are still issues\u2026"
-    },
-    {
-      "project_title": "Project Harvest",
-      "project_slug": "project-harvest",
-      "project_url": "https://jazhikho.itch.io/project-harvest",
-      "title": "Version 2.0 coming",
-      "link": "https://jazhikho.itch.io/project-harvest/devlog/1407563/version-20-coming",
-      "published_at": "2026-02-22T22:51:24+00:00",
-      "summary": "Its been a few weeks since I\u2019ve last posted - it has been a busy semester. I\u2019ve been working on Private Eye Pierce with my team. But with some upcoming festivals coming up, I\u2026"
     }
   ]
 }
