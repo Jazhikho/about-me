@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T19:18:10.065847+00:00",
+  "generated_at": "2026-05-04T04:08:38.215558+00:00",
   "source_profile_url": "https://jazhikho.itch.io/",
   "discovered_projects": [
     {
@@ -21,6 +21,12 @@
       "feed_url": "https://jazhikho.itch.io/loot-luck-liability/devlog.rss"
     },
     {
+      "title": "Spud-Gotchi",
+      "slug": "spud-gotchi",
+      "url": "https://jazhikho.itch.io/spud-gotchi",
+      "feed_url": "https://jazhikho.itch.io/spud-gotchi/devlog.rss"
+    },
+    {
       "title": "Relationship Overhead Tool",
       "slug": "relationship-overhead-tool",
       "url": "https://jazhikho.itch.io/relationship-overhead-tool",
@@ -33,18 +39,6 @@
       "feed_url": "https://jazhikho.itch.io/private-eye-pierce-the-ink-spill/devlog.rss"
     },
     {
-      "title": "Sample Pack - Low Poly Library Assets",
-      "slug": "low-poly-library-assets",
-      "url": "https://jazhikho.itch.io/low-poly-library-assets",
-      "feed_url": "https://jazhikho.itch.io/low-poly-library-assets/devlog.rss"
-    },
-    {
-      "title": "WinterIsComing",
-      "slug": "winteriscoming",
-      "url": "https://jazhikho.itch.io/winteriscoming",
-      "feed_url": "https://jazhikho.itch.io/winteriscoming/devlog.rss"
-    },
-    {
       "title": "Warp Engineer",
       "slug": "warp-engineer",
       "url": "https://jazhikho.itch.io/warp-engineer",
@@ -55,9 +49,30 @@
       "slug": "manual-override",
       "url": "https://jazhikho.itch.io/manual-override",
       "feed_url": "https://jazhikho.itch.io/manual-override/devlog.rss"
+    },
+    {
+      "title": "Sample Pack - Low Poly Library Assets",
+      "slug": "low-poly-library-assets",
+      "url": "https://jazhikho.itch.io/low-poly-library-assets",
+      "feed_url": "https://jazhikho.itch.io/low-poly-library-assets/devlog.rss"
+    },
+    {
+      "title": "WinterIsComing",
+      "slug": "winteriscoming",
+      "url": "https://jazhikho.itch.io/winteriscoming",
+      "feed_url": "https://jazhikho.itch.io/winteriscoming/devlog.rss"
     }
   ],
   "items": [
+    {
+      "project_title": "Spud-Gotchi",
+      "project_slug": "spud-gotchi",
+      "project_url": "https://jazhikho.itch.io/spud-gotchi",
+      "title": "Game Jam Release: Spud-Gatchi",
+      "link": "https://jazhikho.itch.io/spud-gotchi/devlog/1509446/game-jam-release-spud-gatchi",
+      "published_at": "2026-05-03T20:55:01+00:00",
+      "summary": "As I near the end of my graduate degree, one of the goals I have in mind is to produce one game a week. To this, end, I have decided that, starting mid-may, I will be hosting and\u2026"
+    },
     {
       "project_title": "StarGen",
       "project_slug": "stargen",
@@ -156,15 +171,6 @@
       "link": "https://jazhikho.itch.io/stargen/devlog/1450586/stargen-v030",
       "published_at": "2026-03-06T20:27:49+00:00",
       "summary": "StarGen 0.3.0 release! I\u2019ve added a few new features, like the ability to create celestial objects and systems directly. The program has been refactored in C#, which should\u2026"
-    },
-    {
-      "project_title": "StarGen",
-      "project_slug": "stargen",
-      "project_url": "https://jazhikho.itch.io/stargen",
-      "title": "V.0.2",
-      "link": "https://jazhikho.itch.io/stargen/devlog/1430153/v02",
-      "published_at": "2026-02-28T14:50:33+00:00",
-      "summary": "I\u2019ve been working on improving StarGen; one of the immediate things I wanted to tackle was the asteroid belts, since they weren\u2019t displaying properly. There are still issues\u2026"
     }
   ]
 }
