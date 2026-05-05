@@ -27,6 +27,9 @@ MAX_SUMMARY_LENGTH = 180
 class Project:
     title: str
     url: str
+    summary: str = ""
+    cover_image: str = ""
+    genre: str = ""
 
     @property
     def slug(self) -> str:
@@ -40,37 +43,109 @@ class Project:
 class ProjectLinkParser(HTMLParser):
     def __init__(self) -> None:
         super().__init__()
-        self._current_href: str | None = None
+        self._in_cell = False
+        self._cell_depth = 0
+        self._current_url = ""
+        self._current_title = ""
+        self._current_summary = ""
+        self._current_cover_image = ""
+        self._current_genre = ""
+        self._in_title = False
+        self._in_summary = False
+        self._in_genre = False
+        self._summary_from_title = False
         self._current_chunks: list[str] = []
         self.projects: list[Project] = []
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
-        if tag != "a":
-            return
-
         attrs_dict = dict(attrs)
         css_class = attrs_dict.get("class", "")
-        href = attrs_dict.get("href", "")
+        classes = css_class.split()
 
-        if "title" in css_class.split() and "game_link" in css_class.split() and href.startswith(PROFILE_URL):
-            self._current_href = href.rstrip("/")
-            self._current_chunks = []
+        if tag == "div" and "game_cell" in classes and not self._in_cell:
+            self._in_cell = True
+            self._cell_depth = 1
+            self._current_url = ""
+            self._current_title = ""
+            self._current_summary = ""
+            self._current_cover_image = ""
+            self._current_genre = ""
+            self._summary_from_title = False
+            return
+
+        if not self._in_cell:
+            return
+
+        if tag == "div":
+            self._cell_depth += 1
+
+            if "game_text" in classes:
+                self._in_summary = True
+                title = attrs_dict.get("title", "")
+                self._summary_from_title = bool(title)
+                self._current_chunks = [title] if title else []
+                return
+
+            if "game_genre" in classes:
+                self._in_genre = True
+                self._current_chunks = []
+                return
+
+        if tag == "a":
+            href = attrs_dict.get("href", "")
+
+            if "game_link" in classes and href.startswith(PROFILE_URL):
+                self._current_url = href.rstrip("/")
+
+                if "title" in classes:
+                    self._in_title = True
+                    self._current_chunks = []
+
+        if tag == "img" and not self._current_cover_image:
+            self._current_cover_image = attrs_dict.get("data-lazy_src", "") or attrs_dict.get("src", "")
 
     def handle_data(self, data: str) -> None:
-        if self._current_href is not None:
+        if self._in_title or (self._in_summary and not self._summary_from_title) or self._in_genre:
             self._current_chunks.append(data)
 
     def handle_endtag(self, tag: str) -> None:
-        if tag != "a" or self._current_href is None:
+        if not self._in_cell:
             return
 
-        title = normalize_space("".join(self._current_chunks))
+        if tag == "a" and self._in_title:
+            self._current_title = normalize_space("".join(self._current_chunks))
+            self._current_chunks = []
+            self._in_title = False
+            return
 
-        if title:
-          self.projects.append(Project(title=title, url=self._current_href))
+        if tag == "div" and self._in_summary:
+            self._current_summary = normalize_space("".join(self._current_chunks))
+            self._current_chunks = []
+            self._in_summary = False
+            self._summary_from_title = False
 
-        self._current_href = None
-        self._current_chunks = []
+        if tag == "div" and self._in_genre:
+            self._current_genre = normalize_space("".join(self._current_chunks))
+            self._current_chunks = []
+            self._in_genre = False
+
+        if tag == "div":
+            self._cell_depth -= 1
+
+            if self._cell_depth <= 0:
+                if self._current_title and self._current_url:
+                    self.projects.append(
+                        Project(
+                            title=self._current_title,
+                            url=self._current_url,
+                            summary=self._current_summary,
+                            cover_image=self._current_cover_image,
+                            genre=self._current_genre,
+                        )
+                    )
+
+                self._in_cell = False
+                self._cell_depth = 0
 
 
 class HTMLTextStripper(HTMLParser):
@@ -231,9 +306,11 @@ def parse_project_metadata(project: Project) -> dict[str, object]:
         "title": project.title,
         "slug": project.slug,
         "url": project.url,
+        "description": project.summary,
+        "cover_image": project.cover_image,
         "status": rows.get("Status", ""),
         "category": rows.get("Category", ""),
-        "genre": rows.get("Genre", ""),
+        "genre": rows.get("Genre", "") or project.genre,
         "made_with": split_metadata_list(rows.get("Made with", "")),
         "tags": split_metadata_list(rows.get("Tags", "")),
         "ai_disclosure": split_metadata_list(rows.get("AI Disclosure", "")),
@@ -290,7 +367,7 @@ def truncate_summary(value: str) -> str:
         return value
 
     shortened = value[: MAX_SUMMARY_LENGTH - 1].rsplit(" ", 1)[0]
-    return f"{shortened}…"
+    return f"{shortened}..."
 
 
 def normalize_space(value: str) -> str:
@@ -316,6 +393,8 @@ def build_output(projects: list[Project], items: list[dict[str, str]]) -> dict[s
                 "title": project.title,
                 "slug": project.slug,
                 "url": project.url,
+                "description": project.summary,
+                "cover_image": project.cover_image,
                 "feed_url": project.feed_url,
             }
             for project in projects

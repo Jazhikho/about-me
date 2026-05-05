@@ -16,6 +16,20 @@
 
 Use this document to record future revisions to significant AI-assisted artifacts in the repository.
 
+## Portfolio Project Grid Follow-Up
+
+| Field | Value |
+| --- | --- |
+| Date | 2026-05-05 |
+| Model / tool used | Codex (GPT-5-based coding agent) |
+| Task purpose | Compact the About focus-area presentation, convert Featured into a project filter, remove the separate project media section, and render all public itch-discovered projects in one grid |
+| Input materials used | User feedback, screenshots, existing site files, public itch profile HTML, generated itch project metadata |
+| What AI produced | Updates to `index.html`, `styles/site.css`, `scripts/site.js`, `scripts/sync_itch_devlogs.py`, `content/site-data.json`, `content/site-data.schema.json`, generated feed JSON, `README.md`, and `VERSION.md` |
+| What the user accepted | Pending user review |
+| What the user rejected | The tall technical-strengths display, split Featured/Additional project sections, and separate Project Media section |
+| What the user changed | User requested one project bin with Featured as a manually curated filter and public itch discovery driving project availability |
+| Final approval | Pending |
+
 ## Portfolio Refinement And Itch Metadata Sync
 
 | Field | Value |

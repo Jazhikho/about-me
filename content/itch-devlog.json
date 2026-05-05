@@ -1,65 +1,85 @@
 {
-  "generated_at": "2026-05-05T13:16:01.644945+00:00",
+  "generated_at": "2026-05-05T13:35:40.511785+00:00",
   "source_profile_url": "https://jazhikho.itch.io/",
   "discovered_projects": [
     {
       "title": "StarGen",
       "slug": "stargen",
       "url": "https://jazhikho.itch.io/stargen",
+      "description": "Procedurally generated galaxy for automated worldbuilding",
+      "cover_image": "https://img.itch.zone/aW1nLzI1ODI1NTcwLnBuZw==/315x250%23c/WTpJu1.png",
       "feed_url": "https://jazhikho.itch.io/stargen/devlog.rss"
     },
     {
       "title": "Project Harvest",
       "slug": "project-harvest",
       "url": "https://jazhikho.itch.io/project-harvest",
+      "description": "A first-person psychological horror experience set in a shifting corn maze. Identity is fragmented; the maze remembers.",
+      "cover_image": "https://img.itch.zone/aW1nLzIzNzMxNjYxLnBuZw==/315x250%23c/%2FkC2yu.png",
       "feed_url": "https://jazhikho.itch.io/project-harvest/devlog.rss"
     },
     {
       "title": "Loot, Luck & Liability",
       "slug": "loot-luck-liability",
       "url": "https://jazhikho.itch.io/loot-luck-liability",
+      "description": "Now hiring: Dungeon retrieval. Competitive pay. Previous near-death experience a plus. No Luck required.",
+      "cover_image": "https://img.itch.zone/aW1nLzI2MDQ3ODk2LnBuZw==/315x250%23c/YZEQdq.png",
       "feed_url": "https://jazhikho.itch.io/loot-luck-liability/devlog.rss"
     },
     {
       "title": "Spud-Gotchi",
       "slug": "spud-gotchi",
       "url": "https://jazhikho.itch.io/spud-gotchi",
+      "description": "Potato is your friend. Potato is your ONLY friend.",
+      "cover_image": "https://img.itch.zone/aW1nLzI3MDU2MTg5LnBuZw==/315x250%23c/r5cOLm.png",
       "feed_url": "https://jazhikho.itch.io/spud-gotchi/devlog.rss"
     },
     {
       "title": "Relationship Overhead Tool",
       "slug": "relationship-overhead-tool",
       "url": "https://jazhikho.itch.io/relationship-overhead-tool",
+      "description": "A relationship simulation sandbox for measuring complexity overhead.",
+      "cover_image": "https://img.itch.zone/aW1nLzI2MzA2ODM3LnBuZw==/315x250%23c/w8pSEf.png",
       "feed_url": "https://jazhikho.itch.io/relationship-overhead-tool/devlog.rss"
     },
     {
       "title": "Private Eye Pierce & The Ink Spill",
       "slug": "private-eye-pierce-the-ink-spill",
       "url": "https://jazhikho.itch.io/private-eye-pierce-the-ink-spill",
+      "description": "A washed-up detective escapes the monotony of his grayscale office as color invades the outside world",
+      "cover_image": "https://img.itch.zone/aW1nLzI1NDAyNzg1LnBuZw==/315x250%23c/3arWw%2F.png",
       "feed_url": "https://jazhikho.itch.io/private-eye-pierce-the-ink-spill/devlog.rss"
     },
     {
       "title": "Warp Engineer",
       "slug": "warp-engineer",
       "url": "https://jazhikho.itch.io/warp-engineer",
+      "description": "Adjust the harmonics of waves to guide your ship as you surf through spacetime in a warp bubble",
+      "cover_image": "https://img.itch.zone/aW1nLzI0MzMzMjgwLnBuZw==/315x250%23c/XQMftW.png",
       "feed_url": "https://jazhikho.itch.io/warp-engineer/devlog.rss"
     },
     {
       "title": "Manual Override",
       "slug": "manual-override",
       "url": "https://jazhikho.itch.io/manual-override",
+      "description": "This is what happens when you start trusting AI.",
+      "cover_image": "https://img.itch.zone/aW1nLzI0MTE1MjI3LnBuZw==/315x250%23c/fG%2B4lR.png",
       "feed_url": "https://jazhikho.itch.io/manual-override/devlog.rss"
     },
     {
       "title": "Sample Pack - Low Poly Library Assets",
       "slug": "low-poly-library-assets",
       "url": "https://jazhikho.itch.io/low-poly-library-assets",
+      "description": "\u200bA sample pack of four low-poly library assets",
+      "cover_image": "https://img.itch.zone/aW1nLzI2NjkxNjY4LnBuZw==/315x250%23c/w1jzIX.png",
       "feed_url": "https://jazhikho.itch.io/low-poly-library-assets/devlog.rss"
     },
     {
       "title": "WinterIsComing",
       "slug": "winteriscoming",
       "url": "https://jazhikho.itch.io/winteriscoming",
+      "description": "A frozen dragon statue abandoned in a snowy drift",
+      "cover_image": "https://img.itch.zone/aW1nLzI0NzkzMjI1LnBuZw==/315x250%23c/V99CY2.png",
       "feed_url": "https://jazhikho.itch.io/winteriscoming/devlog.rss"
     }
   ],
@@ -71,7 +91,7 @@
       "title": "Game Jam Release: Spud-Gatchi",
       "link": "https://jazhikho.itch.io/spud-gotchi/devlog/1509446/game-jam-release-spud-gatchi",
       "published_at": "2026-05-03T20:55:01+00:00",
-      "summary": "As I near the end of my graduate degree, one of the goals I have in mind is to produce one game a week. To this, end, I have decided that, starting mid-may, I will be hosting and\u2026"
+      "summary": "As I near the end of my graduate degree, one of the goals I have in mind is to produce one game a week. To this, end, I have decided that, starting mid-may, I will be hosting and..."
     },
     {
       "project_title": "StarGen",
@@ -80,7 +100,7 @@
       "title": "v.0.10 released (Back on a weekly release schedule)",
       "link": "https://jazhikho.itch.io/stargen/devlog/1508065/v010-released-back-on-a-weekly-release-schedule",
       "published_at": "2026-05-02T16:03:20+00:00",
-      "summary": "V.0.10.0 is mostly a science hardening pass - there isn\u2019t much that you will see different, but as I move closer to V.1.0, scientific accuracy will become more important. I have\u2026"
+      "summary": "V.0.10.0 is mostly a science hardening pass - there isn\u2019t much that you will see different, but as I move closer to V.1.0, scientific accuracy will become more important. I have..."
     },
     {
       "project_title": "StarGen",
@@ -89,7 +109,7 @@
       "title": "0.9d release and FDG 26",
       "link": "https://jazhikho.itch.io/stargen/devlog/1500729/09d-release-and-fdg-26",
       "published_at": "2026-04-26T20:49:20+00:00",
-      "summary": "Now available for download, StarGen 0.9d! I have already said much about its release, so I won\u2019t labor the point here. However, I have some exciting news! The 2026 Foundations of\u2026"
+      "summary": "Now available for download, StarGen 0.9d! I have already said much about its release, so I won\u2019t labor the point here. However, I have some exciting news! The 2026 Foundations of..."
     },
     {
       "project_title": "StarGen",
@@ -107,7 +127,7 @@
       "title": "v0.9 discussion",
       "link": "https://jazhikho.itch.io/stargen/devlog/1487867/v09-discussion",
       "published_at": "2026-04-12T19:55:39+00:00",
-      "summary": "So, I\u2019m still working on StarGen even though here on itch, the progress is frozen. I am limiting the scope a bit regarding detail; Concept Atlas will be moving to a different\u2026"
+      "summary": "So, I\u2019m still working on StarGen even though here on itch, the progress is frozen. I am limiting the scope a bit regarding detail; Concept Atlas will be moving to a different..."
     },
     {
       "project_title": "StarGen",
@@ -116,7 +136,7 @@
       "title": "Aaaaaand, it's here!",
       "link": "https://jazhikho.itch.io/stargen/devlog/1470375/aaaaaand-its-here",
       "published_at": "2026-03-27T01:45:29+00:00",
-      "summary": "It is here, the showcase version of StarGen. As for my release schedule: there will be no further release builds while development is frozen until late April or early May\u2014bug\u2026"
+      "summary": "It is here, the showcase version of StarGen. As for my release schedule: there will be no further release builds while development is frozen until late April or early May\u2014bug..."
     },
     {
       "project_title": "StarGen",
@@ -125,7 +145,7 @@
       "title": "Attention: Incoming Update!",
       "link": "https://jazhikho.itch.io/stargen/devlog/1467530/attention-incoming-update",
       "published_at": "2026-03-23T21:10:20+00:00",
-      "summary": "StarGen v0.8 is coming soon! With this release, additional updates are getting ready to freeze for roughly the next month. While I will still be working on StarGen in the\u2026"
+      "summary": "StarGen v0.8 is coming soon! With this release, additional updates are getting ready to freeze for roughly the next month. While I will still be working on StarGen in the..."
     },
     {
       "project_title": "StarGen",
@@ -134,7 +154,7 @@
       "title": "Update on updates",
       "link": "https://jazhikho.itch.io/stargen/devlog/1459677/update-on-updates",
       "published_at": "2026-03-15T19:27:00+00:00",
-      "summary": "Thank you to those who have taken the time to check out this program! I am about to enter my final term in school. In the coming weeks, I will be working on both my Thesis\u2026"
+      "summary": "Thank you to those who have taken the time to check out this program! I am about to enter my final term in school. In the coming weeks, I will be working on both my Thesis..."
     },
     {
       "project_title": "StarGen",
@@ -143,7 +163,7 @@
       "title": "v0.5 release",
       "link": "https://jazhikho.itch.io/stargen/devlog/1456772/v05-release",
       "published_at": "2026-03-13T15:36:28+00:00",
-      "summary": "I\u2019m not sure what happened to the v0.4 version, but it was never released anywhere. I decided not to make a big deal about it and just go ahead and release 0.5 instead. This\u2026"
+      "summary": "I\u2019m not sure what happened to the v0.4 version, but it was never released anywhere. I decided not to make a big deal about it and just go ahead and release 0.5 instead. This..."
     },
     {
       "project_title": "Loot, Luck & Liability",
@@ -152,7 +172,7 @@
       "title": "New Game! Announcing Loot, Luck, and Liability!",
       "link": "https://jazhikho.itch.io/loot-luck-liability/devlog/1453882/new-game-announcing-loot-luck-and-liability",
       "published_at": "2026-03-10T03:39:44+00:00",
-      "summary": "Announcing the release of Loot, Luck & Liability. This is a silly game that I made ~48 hours for St. Paddy\u2019s Roguelite Game Jam. Based on feedback, I will be updating this game\u2026"
+      "summary": "Announcing the release of Loot, Luck & Liability. This is a silly game that I made ~48 hours for St. Paddy\u2019s Roguelite Game Jam. Based on feedback, I will be updating this game..."
     },
     {
       "project_title": "Project Harvest",
@@ -161,7 +181,7 @@
       "title": "1.6 Release! (And why it's not 2.0)",
       "link": "https://jazhikho.itch.io/project-harvest/devlog/1452274/16-release-and-why-its-not-20",
       "published_at": "2026-03-08T15:00:54+00:00",
-      "summary": "So, I pushed what I think will be the Final release (for now) of this game. And it\u2019s a 1.6 release, not a 2.0 release. I didn\u2019t end up changing the game play despite wanting to\u2026"
+      "summary": "So, I pushed what I think will be the Final release (for now) of this game. And it\u2019s a 1.6 release, not a 2.0 release. I didn\u2019t end up changing the game play despite wanting to..."
     },
     {
       "project_title": "StarGen",
@@ -170,7 +190,7 @@
       "title": "StarGen v0.3.0",
       "link": "https://jazhikho.itch.io/stargen/devlog/1450586/stargen-v030",
       "published_at": "2026-03-06T20:27:49+00:00",
-      "summary": "StarGen 0.3.0 release! I\u2019ve added a few new features, like the ability to create celestial objects and systems directly. The program has been refactored in C#, which should\u2026"
+      "summary": "StarGen 0.3.0 release! I\u2019ve added a few new features, like the ability to create celestial objects and systems directly. The program has been refactored in C#, which should..."
     }
   ]
 }

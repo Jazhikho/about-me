@@ -113,32 +113,6 @@
             "items": { "type": "string" }
           },
           "image": { "type": "string" },
-          "media": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "type",
-                "label",
-                "url"
-              ],
-              "properties": {
-                "type": {
-                  "type": "string",
-                  "enum": [
-                    "youtube",
-                    "video",
-                    "image",
-                    "external"
-                  ]
-                },
-                "label": { "type": "string" },
-                "url": { "type": "string" },
-                "thumbnail": { "type": "string" }
-              },
-              "additionalProperties": false
-            }
-          },
           "featured": { "type": "boolean" },
           "links": {
             "type": "array",

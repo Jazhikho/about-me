@@ -17,6 +17,10 @@ const projectFilters = [
     label: "All"
   },
   {
+    key: "featured",
+    label: "Featured"
+  },
+  {
     key: "games",
     label: "Games"
   },
@@ -54,10 +58,7 @@ const elements = {
   projectFilterList: document.getElementById("project-filter-list"),
   projectFilterSummary: document.getElementById("project-filter-summary"),
   projectFilterEmpty: document.getElementById("project-filter-empty"),
-  featuredProjectList: document.getElementById("featured-project-list"),
-  additionalProjectList: document.getElementById("additional-project-list"),
-  projectMediaSection: document.getElementById("project-media"),
-  projectMediaList: document.getElementById("project-media-list"),
+  projectList: document.getElementById("project-list"),
   researchIntro: document.getElementById("research-intro"),
   researchThemeList: document.getElementById("research-theme-list"),
   researchEntryList: document.getElementById("research-entry-list"),
@@ -209,12 +210,7 @@ function renderSite(data, newsData, projectMetadata) {
   renderSnapshot(projects);
   renderProjectFilters(projects);
 
-  const featuredProjects = projects.filter((project) => project.featured);
-  const additionalProjects = projects.filter((project) => !project.featured);
-
-  renderProjects(elements.featuredProjectList, featuredProjects, "featured");
-  renderProjects(elements.additionalProjectList, additionalProjects, "compact");
-  renderProjectMedia(projects);
+  renderProjects(elements.projectList, projects);
   applyProjectFilter("all", "All");
   renderResearchEntries(elements.researchEntryList, data.research.entries, data.research.emptyState);
   renderNews(newsData);
@@ -223,28 +219,91 @@ function renderSite(data, newsData, projectMetadata) {
 
 function mergeProjectMetadata(projects, projectMetadata) {
   const metadataProjects = projectMetadata?.projects ?? [];
-  const metadataBySlug = new Map();
-  const metadataByUrlSlug = new Map();
-  const metadataByTitle = new Map();
+  const localBySlug = new Map();
+  const localByUrlSlug = new Map();
+  const localByTitle = new Map();
+  const usedLocalProjects = new Set();
 
-  metadataProjects.forEach((project) => {
-    metadataBySlug.set(normalizeKey(project.slug), project);
-    metadataByUrlSlug.set(normalizeKey(getUrlSlug(project.url)), project);
-    metadataByTitle.set(normalizeKey(project.title), project);
+  projects.forEach((project) => {
+    localBySlug.set(normalizeKey(project.slug), project);
+    localByUrlSlug.set(normalizeKey(getUrlSlug(getPrimaryProjectUrl(project))), project);
+    localByTitle.set(normalizeKey(project.title), project);
   });
 
-  return projects.map((project) => {
-    const itchProject =
-      metadataBySlug.get(normalizeKey(project.slug)) ??
-      metadataByUrlSlug.get(normalizeKey(getPrimaryProjectUrl(project))) ??
-      metadataByTitle.get(normalizeKey(project.title)) ??
+  const mergedProjects = metadataProjects.map((itchProject) => {
+    const localProject =
+      localBySlug.get(normalizeKey(itchProject.slug)) ??
+      localByUrlSlug.get(normalizeKey(getUrlSlug(itchProject.url))) ??
+      localByTitle.get(normalizeKey(itchProject.title)) ??
       null;
 
-    return {
-      ...project,
-      itch: itchProject
-    };
+    if (localProject) {
+      usedLocalProjects.add(localProject);
+    }
+
+    return buildProject(localProject, itchProject);
   });
+
+  projects.forEach((project) => {
+    if (!usedLocalProjects.has(project)) {
+      mergedProjects.push(buildProject(project, null));
+    }
+  });
+
+  return mergedProjects;
+}
+
+function buildProject(localProject, itchProject) {
+  const title = localProject?.title ?? itchProject?.title ?? "Untitled project";
+  const status = localProject?.status ?? itchProject?.status ?? "";
+  const description = localProject?.description ?? itchProject?.description ?? buildItchProjectSummary(itchProject);
+
+  return {
+    slug: localProject?.slug ?? itchProject?.slug ?? slugify(title),
+    title,
+    shortPitch: localProject?.shortPitch ?? itchProject?.description ?? buildItchProjectSummary(itchProject),
+    description,
+    longDescription: localProject?.longDescription ?? description,
+    role: localProject?.role ?? "",
+    techTools: localProject?.techTools ?? [],
+    status,
+    year: localProject?.year ?? getYearFromDate(itchProject?.updated_at),
+    tags: localProject?.tags ?? [],
+    contributions: localProject?.contributions ?? [],
+    demonstrates: localProject?.demonstrates ?? [],
+    caseStudyNotes: localProject?.caseStudyNotes ?? [],
+    image: localProject?.image ?? itchProject?.cover_image ?? "",
+    featured: Boolean(localProject?.featured),
+    links: localProject?.links?.length ? localProject.links : buildItchLinks(itchProject),
+    itch: itchProject
+  };
+}
+
+function buildItchProjectSummary(itchProject) {
+  const parts = [
+    itchProject?.status,
+    itchProject?.genre,
+    itchProject?.category
+  ].filter(Boolean);
+
+  if (parts.length) {
+    return `${parts.join(" ")} project on itch.io.`;
+  }
+
+  return "Public project on itch.io.";
+}
+
+function buildItchLinks(itchProject) {
+  if (!itchProject?.url) {
+    return [];
+  }
+
+  return [
+    {
+      label: "Itch.io project page",
+      url: itchProject.url
+    }
+  ];
 }
 
 function renderParagraphs(container, paragraphs = []) {
@@ -375,15 +434,15 @@ function renderProjectFilters(projects) {
   });
 }
 
-function renderProjects(container, projects, variant) {
+function renderProjects(container, projects) {
   container.replaceChildren();
 
   projects.forEach((project) => {
-    container.append(createProjectCard(project, variant));
+    container.append(createProjectCard(project));
   });
 }
 
-function createProjectCard(project, variant) {
+function createProjectCard(project) {
   const card = document.createElement("article");
   card.className = "project-card";
   card.dataset.projectSlug = project.slug;
@@ -416,14 +475,18 @@ function createProjectCard(project, variant) {
   role.className = "project-role";
   role.textContent = `Role: ${project.role}`;
 
-  const contributionLimit = variant === "featured" ? 4 : 2;
+  const contributionLimit = project.featured ? 4 : 2;
   const contributions = createContributionList(project.contributions, contributionLimit);
   const tech = createChipList("project-tech", getProjectTech(project));
-  const tags = createChipList("project-tags", getProjectTags(project).slice(0, variant === "featured" ? 8 : 5));
+  const tags = createChipList("project-tags", getProjectTags(project).slice(0, project.featured ? 8 : 5));
   const actions = createProjectActions(project);
   const details = createProjectDetails(project);
 
-  body.append(titleRow, pitch, role);
+  body.append(titleRow, pitch);
+
+  if (project.role) {
+    body.append(role);
+  }
 
   if (contributions) {
     body.append(contributions);
@@ -443,13 +506,15 @@ function createProjectCard(project, variant) {
 }
 
 function createProjectImage(project) {
-  if (!project.image) {
+  const imageSource = project.image || project.itch?.cover_image;
+
+  if (!imageSource) {
     return createPlaceholder(project);
   }
 
   const image = document.createElement("img");
   image.className = "project-image";
-  image.src = project.image;
+  image.src = imageSource;
   image.alt = `${project.title} project image`;
   image.loading = "lazy";
   image.decoding = "async";
@@ -693,6 +758,10 @@ function matchesProjectFilter(project, filterKey) {
     return true;
   }
 
+  if (filterKey === "featured") {
+    return Boolean(project.featured);
+  }
+
   if (filterKey.startsWith("skill:")) {
     const skill = filterKey.slice("skill:".length);
     return projectContains(project, [skill]);
@@ -773,82 +842,12 @@ function getProjectSearchText(project) {
     ...(project.demonstrates ?? []),
     project.itch?.status,
     project.itch?.category,
+    project.itch?.description,
     project.itch?.genre,
     ...(project.itch?.made_with ?? []),
     ...(project.itch?.tags ?? []),
     ...(project.itch?.ai_disclosure ?? [])
   ].join(" "));
-}
-
-function renderProjectMedia(projects) {
-  elements.projectMediaList.replaceChildren();
-
-  const mediaItems = projects.flatMap((project) => {
-    return (project.media ?? []).map((item) => ({
-      ...item,
-      projectTitle: project.title
-    }));
-  });
-
-  if (!mediaItems.length) {
-    elements.projectMediaSection.hidden = true;
-    return;
-  }
-
-  elements.projectMediaSection.hidden = false;
-
-  mediaItems.forEach((item) => {
-    elements.projectMediaList.append(createMediaCard(item));
-  });
-}
-
-function createMediaCard(item) {
-  const article = document.createElement("article");
-  article.className = "media-card";
-
-  const frame = document.createElement("div");
-  frame.className = "media-frame";
-
-  if (item.type === "image") {
-    const image = document.createElement("img");
-    image.src = item.url;
-    image.alt = `${item.projectTitle}: ${item.label}`;
-    image.loading = "lazy";
-    image.decoding = "async";
-    frame.append(image);
-  } else if (item.type === "video") {
-    const video = document.createElement("video");
-    video.src = item.url;
-    video.controls = true;
-    video.preload = "metadata";
-    frame.append(video);
-  } else {
-    const link = document.createElement("a");
-    link.href = item.url;
-    link.target = "_blank";
-    link.rel = "noreferrer noopener";
-    link.textContent = item.thumbnail ? "" : "Open media";
-
-    if (item.thumbnail) {
-      const image = document.createElement("img");
-      image.src = item.thumbnail;
-      image.alt = `${item.projectTitle}: ${item.label}`;
-      image.loading = "lazy";
-      image.decoding = "async";
-      link.append(image);
-    }
-
-    frame.append(link);
-  }
-
-  const title = document.createElement("h3");
-  title.textContent = item.projectTitle;
-
-  const label = document.createElement("p");
-  label.textContent = item.label;
-
-  article.append(frame, title, label);
-  return article;
 }
 
 function renderResearchEntries(container, entries = [], emptyState) {
@@ -1081,6 +1080,20 @@ function getMajorTechnologies(projects) {
 
 function buildYearStatus(project) {
   return [project.year, project.status].filter(Boolean).join(" / ");
+}
+
+function getYearFromDate(value) {
+  if (!value) {
+    return "";
+  }
+
+  const parsed = new Date(value);
+
+  if (Number.isNaN(parsed.getTime())) {
+    return "";
+  }
+
+  return String(parsed.getFullYear());
 }
 
 function getDetailsId(project) {

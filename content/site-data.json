@@ -40,8 +40,7 @@
           "Godot",
           "Unity",
           "Python",
-          "HTML5",
-          "GDevelop"
+          "HTML5"
         ]
       },
       {
@@ -50,9 +49,7 @@
           "Procedural generation",
           "Tools development",
           "Simulation design",
-          "Benchmarking",
-          "Performance logging",
-          "Automated test coverage"
+          "Benchmarking"
         ]
       },
       {
@@ -61,9 +58,7 @@
           "Technical design",
           "Game systems design",
           "Narrative systems",
-          "UI/UX awareness",
-          "Mouse-first interaction",
-          "Mobile support"
+          "UI/UX awareness"
         ]
       },
       {
@@ -71,9 +66,7 @@
         "skills": [
           "Research and analytical writing",
           "Reflective play",
-          "Ethical AI workflow awareness",
-          "Public AI disclosure",
-          "Narrative support"
+          "Ethical AI workflow awareness"
         ]
       }
     ],
@@ -117,13 +110,6 @@
         "StarGen treats generation as a design tool that can be inspected, repeated, and expanded over time."
       ],
       "image": "./assets/projects/stargen.png",
-      "media": [
-        {
-          "type": "image",
-          "label": "StarGen project image",
-          "url": "./assets/projects/stargen.png"
-        }
-      ],
       "featured": true,
       "links": [
         {
@@ -169,13 +155,6 @@
         "Project Harvest uses structure, failure, and tone to keep responsibility inside the game system visible."
       ],
       "image": "./assets/projects/project-harvest.png",
-      "media": [
-        {
-          "type": "image",
-          "label": "Project Harvest project image",
-          "url": "./assets/projects/project-harvest.png"
-        }
-      ],
       "featured": true,
       "links": [
         {
@@ -221,13 +200,6 @@
         "The tool explores social simulation with more texture than a single relationship meter while keeping overhead readable."
       ],
       "image": "./assets/projects/relationship-overhead-tool.png",
-      "media": [
-        {
-          "type": "image",
-          "label": "Relationship Overhead Tool project image",
-          "url": "./assets/projects/relationship-overhead-tool.png"
-        }
-      ],
       "featured": true,
       "links": [
         {
@@ -268,13 +240,6 @@
         "Localization support"
       ],
       "image": "./assets/projects/loot-luck-liability.png",
-      "media": [
-        {
-          "type": "image",
-          "label": "Loot, Luck & Liability project image",
-          "url": "./assets/projects/loot-luck-liability.png"
-        }
-      ],
       "featured": false,
       "links": [
         {
@@ -314,13 +279,6 @@
         "Atmosphere-focused prototyping"
       ],
       "image": "./assets/projects/private-eye-pierce.png",
-      "media": [
-        {
-          "type": "image",
-          "label": "Private Eye Pierce project image",
-          "url": "./assets/projects/private-eye-pierce.png"
-        }
-      ],
       "featured": false,
       "links": [
         {
@@ -360,13 +318,6 @@
         "AI provenance awareness"
       ],
       "image": "./assets/projects/warp-engineer.png",
-      "media": [
-        {
-          "type": "image",
-          "label": "Warp Engineer project image",
-          "url": "./assets/projects/warp-engineer.png"
-        }
-      ],
       "featured": false,
       "links": [
         {
@@ -406,13 +357,6 @@
         "Focused interaction constraints"
       ],
       "image": "./assets/projects/manual-override.png",
-      "media": [
-        {
-          "type": "image",
-          "label": "Manual Override project image",
-          "url": "./assets/projects/manual-override.png"
-        }
-      ],
       "featured": false,
       "links": [
         {

@@ -475,6 +475,24 @@ h2 {
 
 .about-layout {
   grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+  align-items: start;
+}
+
+#about .section-grid {
+  grid-template-columns: 1fr;
+}
+
+#about .section-heading-block {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  padding-top: 0;
+}
+
+#about .section-heading-block h2 {
+  max-width: 44rem;
 }
 
 .surface-panel {
@@ -503,13 +521,14 @@ h2 {
 
 .skill-group-list {
   display: grid;
-  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem 1rem;
 }
 
 .skill-group-title {
-  margin: 0 0 0.55rem;
+  margin: 0 0 0.4rem;
   color: var(--text);
-  font-size: 1rem;
+  font-size: 0.94rem;
 }
 
 .skill-chip-list li {
@@ -528,9 +547,10 @@ h2 {
 }
 
 .skill-chip-button {
-  min-height: 2.35rem;
-  padding: 0.45rem 0.8rem;
+  min-height: 2.05rem;
+  padding: 0.34rem 0.62rem;
   border-radius: 999px;
+  font-size: 0.86rem;
 }
 
 .skill-chip-button[aria-pressed="true"],
@@ -540,8 +560,7 @@ h2 {
   background: linear-gradient(135deg, var(--accent-strong), var(--accent));
 }
 
-.snapshot-grid,
-.media-grid {
+.snapshot-grid {
   display: grid;
   gap: 1.2rem;
 }
@@ -620,6 +639,11 @@ h2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.project-grid-all {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 1.4rem;
+}
+
 .project-card {
   display: flex;
   flex-direction: column;
@@ -631,8 +655,7 @@ h2 {
   box-shadow: var(--shadow);
 }
 
-.project-card-media,
-.project-media {
+.project-card-media {
   position: relative;
   aspect-ratio: 16 / 10;
   overflow: hidden;
@@ -801,62 +824,6 @@ h2 {
   margin-top: 0;
 }
 
-.media-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.media-card {
-  overflow: hidden;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  background: linear-gradient(180deg, rgba(29, 23, 20, 0.95), rgba(20, 16, 14, 0.92));
-  box-shadow: var(--shadow);
-}
-
-.media-frame {
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-  background:
-    radial-gradient(circle at top right, rgba(223, 190, 146, 0.18), transparent 38%),
-    linear-gradient(180deg, rgba(70, 52, 40, 0.62), rgba(22, 17, 15, 0.96));
-}
-
-.media-frame img,
-.media-frame video,
-.media-frame a {
-  width: 100%;
-  height: 100%;
-}
-
-.media-frame img,
-.media-frame video {
-  object-fit: cover;
-}
-
-.media-frame a {
-  display: grid;
-  place-items: center;
-  color: var(--accent);
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.media-card h3,
-.media-card p {
-  margin: 0;
-  padding: 0 1rem;
-}
-
-.media-card h3 {
-  padding-top: 1rem;
-  font-size: 1.1rem;
-}
-
-.media-card p {
-  padding-bottom: 1rem;
-  color: var(--muted);
-}
-
 .theme-list {
   flex-direction: column;
 }
@@ -1003,8 +970,8 @@ h2 {
   .about-layout,
   .project-grid-featured,
   .project-grid-compact,
+  .project-grid-all,
   .snapshot-grid,
-  .media-grid,
   .link-grid,
   .footer-layout {
     grid-template-columns: 1fr;
@@ -1054,6 +1021,10 @@ h2 {
   .project-actions {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .skill-group-list {
+    grid-template-columns: 1fr;
   }
 
   .hero-tags,

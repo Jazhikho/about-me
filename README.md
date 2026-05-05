@@ -36,10 +36,8 @@ The renderer in [site.js](/D:/Website/scripts/site.js) loads `content/site-data.
 - About copy
 - Portfolio snapshot stats
 - Project filters
-- Featured project cards
-- Additional work cards
+- One unified project grid sourced from local JSON and public itch discovery
 - Optional inline project details
-- Optional project media
 - Research themes and public-output empty state
 - Public links
 
@@ -47,7 +45,7 @@ The renderer in [site.js](/D:/Website/scripts/site.js) loads `content/site-data.
 
 The site now includes a generated news feed in [itch-devlog.json](/D:/Website/content/itch-devlog.json).
 
-The same sync also writes public itch project metadata to [itch-projects.json](/D:/Website/content/itch-projects.json). That metadata is generated from public itch project pages and may include status, category, genre, made-with tools, tags, AI disclosure labels, and itch update timestamps. The site uses this metadata to support project filters, snapshot counts, and skill/technology presentation while keeping authored portfolio claims in [site-data.json](/D:/Website/content/site-data.json).
+The same sync also writes public itch project metadata to [itch-projects.json](/D:/Website/content/itch-projects.json). That metadata is generated from the public itch profile and public project pages. It may include project descriptions, cover images, status, category, genre, made-with tools, tags, AI disclosure labels, and itch update timestamps. The site uses this metadata to render public itch projects dynamically, support project filters, power snapshot counts, and enrich skill/technology presentation while keeping authored portfolio claims in [site-data.json](/D:/Website/content/site-data.json).
 
 It is produced by [sync_itch_devlogs.py](/D:/Website/scripts/sync_itch_devlogs.py), which:
 
@@ -128,7 +126,6 @@ Each project entry supports:
 - `demonstrates`
 - `caseStudyNotes`
 - `image`
-- `media`
 - `featured`
 - `links`
 
@@ -139,14 +136,15 @@ Optional project fields:
 - `contributions`: concrete project-facing bullets shown on cards and in details.
 - `demonstrates`: concise capability bullets for the details panel.
 - `caseStudyNotes`: short notes for the expandable details panel.
-- `media`: image, video, YouTube, or external media entries with `type`, `label`, `url`, and optional `thumbnail`.
 
 Site-level `skillGroups` can group public-safe skills by category. If `skillGroups` is missing, the renderer falls back to the older flat `strengths` list.
 
-### Featured vs additional work
+### Unified projects and featured filter
 
-- Set `"featured": true` to place a project in the Featured Projects section.
-- Set `"featured": false` to place it in Additional Work.
+- Public projects discovered from itch render automatically in the project grid.
+- Local entries in `site-data.json` enrich matching itch projects with curated portfolio copy.
+- Set `"featured": true` in `site-data.json` to include a project in the Featured filter.
+- Projects without a local `site-data.json` entry still render from public itch metadata, but they are not featured by default.
 
 ### Project images
 
