@@ -42,6 +42,24 @@
           "type": "array",
           "items": { "type": "string" }
         },
+        "skillGroups": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "label",
+              "skills"
+            ],
+            "properties": {
+              "label": { "type": "string" },
+              "skills": {
+                "type": "array",
+                "items": { "type": "string" }
+              }
+            },
+            "additionalProperties": false
+          }
+        },
         "footerNote": { "type": "string" }
       },
       "additionalProperties": false
@@ -82,7 +100,45 @@
             "type": "array",
             "items": { "type": "string" }
           },
+          "contributions": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "demonstrates": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "caseStudyNotes": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
           "image": { "type": "string" },
+          "media": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "type",
+                "label",
+                "url"
+              ],
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "youtube",
+                    "video",
+                    "image",
+                    "external"
+                  ]
+                },
+                "label": { "type": "string" },
+                "url": { "type": "string" },
+                "thumbnail": { "type": "string" }
+              },
+              "additionalProperties": false
+            }
+          },
           "featured": { "type": "boolean" },
           "links": {
             "type": "array",

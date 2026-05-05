@@ -16,6 +16,20 @@
 
 Use this document to record future revisions to significant AI-assisted artifacts in the repository.
 
+## Portfolio Refinement And Itch Metadata Sync
+
+| Field | Value |
+| --- | --- |
+| Date | 2026-05-05 |
+| Model / tool used | Codex (GPT-5-based coding agent) |
+| Task purpose | Refine the static portfolio with project filtering, grouped skills, portfolio snapshot stats, contribution bullets, expandable details, media-ready project data, and synced public itch project metadata |
+| Input materials used | Existing site files, existing public-safe project JSON, public itch project pages, existing feed sync workflow, user-approved implementation plan |
+| What AI produced | Updates to `index.html`, `styles/site.css`, `scripts/site.js`, `scripts/sync_itch_devlogs.py`, `.github/workflows/sync-itch-devlogs.yml`, `content/site-data.json`, `content/site-data.schema.json`, generated `content/itch-projects.json`, regenerated `content/itch-devlog.json`, `README.md`, and `VERSION.md` |
+| What the user accepted | Pending user review |
+| What the user rejected | None recorded yet |
+| What the user changed | User requested a hybrid approach: sync itch metadata dynamically, but keep specific contribution claims curated in local JSON |
+| Final approval | Pending |
+
 ## Itch Devlog Sync
 
 | Field | Value |

@@ -1,5 +1,6 @@
-# Version 0.0.3.3
+# Version 0.0.4.0
 
+- 2026-05-05: Added project filters, portfolio snapshot stats, grouped skills, contribution bullets, expandable project details, media-ready project data, and synced public itch project metadata.
 - 2026-04-18: Added a public Fiverr link for freelance work requests in the site links section.
 - 2026-04-18: Added cache-busting version parameters for the main stylesheet and script so GitHub Pages cannot keep serving stale feed UI assets after deployment.
 - 2026-04-18: Tightened the latest-news layout into a true one-line scroll list with five visible rows and lighter row styling.

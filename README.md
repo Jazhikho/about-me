@@ -16,6 +16,7 @@ The site is designed for GitHub Pages and uses plain HTML, CSS, and minimal vani
 /assets/branding/
 /assets/projects/
 /content/site-data.json
+/content/itch-projects.json
 /content/itch-devlog.json
 /content/patreon-posts.json
 /content/site-data.schema.json
@@ -33,21 +34,28 @@ The renderer in [site.js](/D:/Website/scripts/site.js) loads `content/site-data.
 - Hero copy and quick strengths
 - Latest news list sourced from itch devlogs and Patreon public posts
 - About copy
+- Portfolio snapshot stats
+- Project filters
 - Featured project cards
 - Additional work cards
+- Optional inline project details
+- Optional project media
 - Research themes and public-output empty state
 - Public links
 
-## Automatic itch devlog sync
+## Automatic itch project and devlog sync
 
 The site now includes a generated news feed in [itch-devlog.json](/D:/Website/content/itch-devlog.json).
+
+The same sync also writes public itch project metadata to [itch-projects.json](/D:/Website/content/itch-projects.json). That metadata is generated from public itch project pages and may include status, category, genre, made-with tools, tags, AI disclosure labels, and itch update timestamps. The site uses this metadata to support project filters, snapshot counts, and skill/technology presentation while keeping authored portfolio claims in [site-data.json](/D:/Website/content/site-data.json).
 
 It is produced by [sync_itch_devlogs.py](/D:/Website/scripts/sync_itch_devlogs.py), which:
 
 - Fetches the public itch profile at `https://jazhikho.itch.io/`
 - Discovers project URLs automatically from the profile page
+- Fetches public metadata from each discovered project page
 - Tries each project's `devlog.rss`
-- Collects recent entries and writes a local JSON file for the site to render
+- Collects recent entries and writes local JSON files for the site to render
 
 This avoids client-side cross-origin dependence on itch itself and keeps the published site static.
 
@@ -58,7 +66,8 @@ The workflow in [sync-itch-devlogs.yml](/D:/Website/.github/workflows/sync-itch-
 - Runs every 6 hours
 - Can also be run manually from the Actions tab
 - Regenerates `content/itch-devlog.json`
-- Commits and pushes the updated file if anything changed
+- Regenerates `content/itch-projects.json`
+- Commits and pushes the updated files if anything changed
 
 ### Run the sync locally
 
@@ -115,11 +124,24 @@ Each project entry supports:
 - `status`
 - `year`
 - `tags`
+- `contributions`
+- `demonstrates`
+- `caseStudyNotes`
 - `image`
+- `media`
 - `featured`
 - `links`
 
 If you want to check the expected shape before editing, use [site-data.schema.json](/D:/Website/content/site-data.schema.json) as the reference.
+
+Optional project fields:
+
+- `contributions`: concrete project-facing bullets shown on cards and in details.
+- `demonstrates`: concise capability bullets for the details panel.
+- `caseStudyNotes`: short notes for the expandable details panel.
+- `media`: image, video, YouTube, or external media entries with `type`, `label`, `url`, and optional `thumbnail`.
+
+Site-level `skillGroups` can group public-safe skills by category. If `skillGroups` is missing, the renderer falls back to the older flat `strengths` list.
 
 ### Featured vs additional work
 

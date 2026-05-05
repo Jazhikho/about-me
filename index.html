@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles/site.css?v=0.0.3.2">
+  <link rel="stylesheet" href="./styles/site.css?v=0.0.4.0">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -30,8 +30,8 @@
 
       <nav class="site-nav" aria-label="Primary navigation">
         <a href="#about">About</a>
-        <a href="#featured-projects">Featured Projects</a>
-        <a href="#additional-work">Additional Work</a>
+        <a href="#portfolio-snapshot">Snapshot</a>
+        <a href="#projects">Projects</a>
         <a href="#research">Research</a>
         <a href="#links">Links</a>
       </nav>
@@ -99,6 +99,7 @@
           <aside class="surface-panel stack-panel">
             <div>
               <p class="panel-label">Technical strengths</p>
+              <div class="skill-group-list" id="skill-group-list"></div>
               <ul class="chip-list" id="strength-list"></ul>
             </div>
 
@@ -111,6 +112,37 @@
               </ul>
             </div>
           </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section snapshot-section" id="portfolio-snapshot" aria-labelledby="portfolio-snapshot-heading">
+      <div class="site-shell">
+        <div class="section-heading-row">
+          <div>
+            <p class="section-label">Portfolio Snapshot</p>
+            <h2 id="portfolio-snapshot-heading">Quick read</h2>
+          </div>
+          <p class="section-note">A compact view of public work represented on this portfolio.</p>
+        </div>
+
+        <div class="snapshot-grid" id="snapshot-list"></div>
+      </div>
+    </section>
+
+    <section class="content-section project-filter-section" id="projects" aria-labelledby="projects-heading">
+      <div class="site-shell">
+        <div class="section-heading-row">
+          <div>
+            <p class="section-label">Projects</p>
+            <h2 id="projects-heading">Filter the work</h2>
+          </div>
+          <p class="section-note" id="project-filter-summary" aria-live="polite">Showing all projects.</p>
+        </div>
+
+        <div class="project-filter-panel surface-panel">
+          <div class="filter-button-list" id="project-filter-list" aria-label="Project filters"></div>
+          <p class="empty-state project-filter-empty" id="project-filter-empty" aria-live="polite" hidden>No projects match this filter yet.</p>
         </div>
       </div>
     </section>
@@ -140,6 +172,20 @@
         </div>
 
         <div class="project-grid project-grid-compact" id="additional-project-list"></div>
+      </div>
+    </section>
+
+    <section class="content-section media-section" id="project-media" aria-labelledby="project-media-heading" hidden>
+      <div class="site-shell">
+        <div class="section-heading-row">
+          <div>
+            <p class="section-label">Project Media</p>
+            <h2 id="project-media-heading">Visual reference points</h2>
+          </div>
+          <p class="section-note">Public images and media connected to the projects above.</p>
+        </div>
+
+        <div class="media-grid" id="project-media-list"></div>
       </div>
     </section>
 
@@ -194,6 +240,6 @@
     <p class="noscript-banner">This portfolio uses a small amount of JavaScript to load content from JSON. Enable JavaScript or preview the site through GitHub Pages or a local web server.</p>
   </noscript>
 
-  <script src="./scripts/site.js?v=0.0.3.2" defer></script>
+  <script src="./scripts/site.js?v=0.0.4.0" defer></script>
 </body>
 </html>

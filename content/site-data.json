@@ -32,6 +32,51 @@
       "Research and analytical writing",
       "Ethical AI workflow awareness"
     ],
+    "skillGroups": [
+      {
+        "label": "Programming / Engines",
+        "skills": [
+          "C#",
+          "Godot",
+          "Unity",
+          "Python",
+          "HTML5",
+          "GDevelop"
+        ]
+      },
+      {
+        "label": "Systems & Tools",
+        "skills": [
+          "Procedural generation",
+          "Tools development",
+          "Simulation design",
+          "Benchmarking",
+          "Performance logging",
+          "Automated test coverage"
+        ]
+      },
+      {
+        "label": "Design & UX",
+        "skills": [
+          "Technical design",
+          "Game systems design",
+          "Narrative systems",
+          "UI/UX awareness",
+          "Mouse-first interaction",
+          "Mobile support"
+        ]
+      },
+      {
+        "label": "Research / Documentation",
+        "skills": [
+          "Research and analytical writing",
+          "Reflective play",
+          "Ethical AI workflow awareness",
+          "Public AI disclosure",
+          "Narrative support"
+        ]
+      }
+    ],
     "footerNote": ""
   },
   "projects": [
@@ -57,7 +102,28 @@
         "Worldbuilding",
         "Seeded generation"
       ],
+      "contributions": [
+        "Built seeded procedural generation for galaxies and star systems",
+        "Added 3D viewers for inspecting generated celestial objects",
+        "Structured generation for repeatable worldbuilding results",
+        "Maintained automated test coverage"
+      ],
+      "demonstrates": [
+        "Procedural systems design",
+        "Technical tool development",
+        "Worldbuilding workflows"
+      ],
+      "caseStudyNotes": [
+        "StarGen treats generation as a design tool that can be inspected, repeated, and expanded over time."
+      ],
       "image": "./assets/projects/stargen.png",
+      "media": [
+        {
+          "type": "image",
+          "label": "StarGen project image",
+          "url": "./assets/projects/stargen.png"
+        }
+      ],
       "featured": true,
       "links": [
         {
@@ -88,7 +154,28 @@
         "Roguelite",
         "Narrative design"
       ],
+      "contributions": [
+        "Built a psychological horror roguelite structure in Godot",
+        "Used repetition and player choice to foreground player-avatar responsibility",
+        "Created 3D environment work with Blender and 3ds Max",
+        "Designed reflective narrative systems around identity and complicity"
+      ],
+      "demonstrates": [
+        "Reflective game design",
+        "Narrative systems",
+        "Atmospheric 3D development"
+      ],
+      "caseStudyNotes": [
+        "Project Harvest uses structure, failure, and tone to keep responsibility inside the game system visible."
+      ],
       "image": "./assets/projects/project-harvest.png",
+      "media": [
+        {
+          "type": "image",
+          "label": "Project Harvest project image",
+          "url": "./assets/projects/project-harvest.png"
+        }
+      ],
       "featured": true,
       "links": [
         {
@@ -119,7 +206,28 @@
         "Simulation",
         "Narrative support"
       ],
+      "contributions": [
+        "Built a simulation sandbox for nuanced relationship systems",
+        "Created matrix views for reading social-system state",
+        "Added benchmarking and performance logging for system overhead",
+        "Tested relationship-model readability against computational cost"
+      ],
+      "demonstrates": [
+        "Systems research",
+        "Simulation tooling",
+        "Performance-aware design"
+      ],
+      "caseStudyNotes": [
+        "The tool explores social simulation with more texture than a single relationship meter while keeping overhead readable."
+      ],
       "image": "./assets/projects/relationship-overhead-tool.png",
+      "media": [
+        {
+          "type": "image",
+          "label": "Relationship Overhead Tool project image",
+          "url": "./assets/projects/relationship-overhead-tool.png"
+        }
+      ],
       "featured": true,
       "links": [
         {
@@ -150,7 +258,23 @@
         "Localization",
         "Jam project"
       ],
+      "contributions": [
+        "Built a browser roguelite with fast runs and light progression",
+        "Added localization and mobile support for public browser delivery"
+      ],
+      "demonstrates": [
+        "Rapid iteration",
+        "Browser game delivery",
+        "Localization support"
+      ],
       "image": "./assets/projects/loot-luck-liability.png",
+      "media": [
+        {
+          "type": "image",
+          "label": "Loot, Luck & Liability project image",
+          "url": "./assets/projects/loot-luck-liability.png"
+        }
+      ],
       "featured": false,
       "links": [
         {
@@ -160,7 +284,7 @@
       ]
     },
     {
-      "slug": "private-eye-pierce",
+      "slug": "private-eye-pierce-the-ink-spill",
       "title": "Private Eye Pierce & The Ink Spill",
       "shortPitch": "A comic-noir point-and-click adventure where grayscale routine gives way to surreal color and mystery.",
       "description": "This collaborative Unity prototype focuses on atmosphere, character, and story-driven puzzle design more than raw difficulty.",
@@ -180,7 +304,23 @@
         "Collaboration",
         "Vertical slice"
       ],
+      "contributions": [
+        "Co-developed a Unity point-and-click narrative prototype",
+        "Supported story-driven puzzle design and mouse-first interaction"
+      ],
+      "demonstrates": [
+        "Collaborative development",
+        "Narrative adventure design",
+        "Atmosphere-focused prototyping"
+      ],
       "image": "./assets/projects/private-eye-pierce.png",
+      "media": [
+        {
+          "type": "image",
+          "label": "Private Eye Pierce project image",
+          "url": "./assets/projects/private-eye-pierce.png"
+        }
+      ],
       "featured": false,
       "links": [
         {
@@ -210,7 +350,23 @@
         "Systems tuning",
         "Puzzle"
       ],
+      "contributions": [
+        "Directed a systems-tuning puzzle prototype around harmonics and coherence",
+        "Maintained public release ownership with AI workflow disclosure"
+      ],
+      "demonstrates": [
+        "Readable systems feedback",
+        "Technical puzzle framing",
+        "AI provenance awareness"
+      ],
       "image": "./assets/projects/warp-engineer.png",
+      "media": [
+        {
+          "type": "image",
+          "label": "Warp Engineer project image",
+          "url": "./assets/projects/warp-engineer.png"
+        }
+      ],
       "featured": false,
       "links": [
         {
@@ -240,7 +396,23 @@
         "Jam project",
         "Sci-fi"
       ],
+      "contributions": [
+        "Built an experimental prototype around AI risk and misalignment",
+        "Designed mouse-only interaction for a jam-scale sci-fi concept"
+      ],
+      "demonstrates": [
+        "Experimental prototyping",
+        "AI systems themes",
+        "Focused interaction constraints"
+      ],
       "image": "./assets/projects/manual-override.png",
+      "media": [
+        {
+          "type": "image",
+          "label": "Manual Override project image",
+          "url": "./assets/projects/manual-override.png"
+        }
+      ],
       "featured": false,
       "links": [
         {
