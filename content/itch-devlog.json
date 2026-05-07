@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-06T20:00:42.894392+00:00",
+  "generated_at": "2026-05-07T04:05:07.517168+00:00",
   "source_profile_url": "https://jazhikho.itch.io/",
   "discovered_projects": [
     {
@@ -84,6 +84,15 @@
     }
   ],
   "items": [
+    {
+      "project_title": "Spud-Gotchi",
+      "project_slug": "spud-gotchi",
+      "project_url": "https://jazhikho.itch.io/spud-gotchi",
+      "title": "Assessing Spud-Gotchi",
+      "link": "https://jazhikho.itch.io/spud-gotchi/devlog/1516234/assessing-spud-gotchi",
+      "published_at": "2026-05-06T22:58:08+00:00",
+      "summary": "Well, the Jam is over. Spud-Gotchi didn\u2019t perform terrible, but it didn\u2019t perform as well as others. I think part of this was based on the lack of votes, but removing that, the..."
+    },
     {
       "project_title": "Spud-Gotchi",
       "project_slug": "spud-gotchi",
@@ -182,15 +191,6 @@
       "link": "https://jazhikho.itch.io/project-harvest/devlog/1452274/16-release-and-why-its-not-20",
       "published_at": "2026-03-08T15:00:54+00:00",
       "summary": "So, I pushed what I think will be the Final release (for now) of this game. And it\u2019s a 1.6 release, not a 2.0 release. I didn\u2019t end up changing the game play despite wanting to..."
-    },
-    {
-      "project_title": "StarGen",
-      "project_slug": "stargen",
-      "project_url": "https://jazhikho.itch.io/stargen",
-      "title": "StarGen v0.3.0",
-      "link": "https://jazhikho.itch.io/stargen/devlog/1450586/stargen-v030",
-      "published_at": "2026-03-06T20:27:49+00:00",
-      "summary": "StarGen 0.3.0 release! I\u2019ve added a few new features, like the ability to create celestial objects and systems directly. The program has been refactored in C#, which should..."
     }
   ]
 }
