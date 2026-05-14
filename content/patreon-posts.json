@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-14T14:40:16.421846+00:00",
+  "generated_at": "2026-05-14T20:01:28.227810+00:00",
   "campaign": {
     "id": "11339076",
     "name": "Forging Realities",
@@ -14,15 +14,6 @@
       "url": "https://www.patreon.com/posts/stargen-v0-9-156016963",
       "published_at": "2026-04-19T16:48:09.000+00:00",
       "summary": "It's been almost a month since my last release of StarGen. I have been working on other projects, but StarGen hasn't been inactive during this time. I've been working on the back..."
-    },
-    {
-      "id": "154794191",
-      "campaign_name": "Forging Realities",
-      "campaign_url": "https://www.patreon.com/forgewalkerstudios",
-      "title": "RenWriter (A hint of things to come)",
-      "url": "https://www.patreon.com/posts/renwriter-hint-154794191",
-      "published_at": "2026-04-04T21:25:51.000+00:00",
-      "summary": "Like Visual Novels? Love Ren'Py? I am building an IDE for Ren'Py, which should be released within the next week or so as a beta. For more information and behind the scenes..."
     },
     {
       "id": "154050898",
