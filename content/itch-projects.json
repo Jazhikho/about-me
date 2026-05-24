@@ -1,7 +1,39 @@
 {
-  "generated_at": "2026-05-24T13:59:26.259459+00:00",
+  "generated_at": "2026-05-24T19:40:03.314492+00:00",
   "source_profile_url": "https://jazhikho.itch.io/",
   "projects": [
+    {
+      "title": "Untitled Map Game",
+      "slug": "untitled-map-game",
+      "url": "https://jazhikho.itch.io/untitled-map-game",
+      "description": "Chart a world tile by tile before HQ runs out of supplies and morale. Dispatch teams, manage a frontier, and survive.",
+      "cover_image": "https://img.itch.zone/aW1nLzI3NDMzODA5LnBuZw==/315x250%23c/xJz3sw.png",
+      "status": "Released",
+      "category": "",
+      "genre": "Simulation , Strategy",
+      "made_with": [
+        "Godot"
+      ],
+      "tags": [
+        "Casual",
+        "Exploration",
+        "Godot",
+        "Management",
+        "Procedural Generation",
+        "Tilemap",
+        "Top-Down",
+        "Turn-based Strategy"
+      ],
+      "ai_disclosure": [
+        "AI Assisted",
+        "Code",
+        "Graphics",
+        "Sounds",
+        "Text"
+      ],
+      "updated_at": "",
+      "updated_text": ""
+    },
     {
       "title": "Around the Bend",
       "slug": "around-the-bend",
@@ -24,8 +56,8 @@
         "Singleplayer"
       ],
       "ai_disclosure": [],
-      "updated_at": "",
-      "updated_text": ""
+      "updated_at": "2026-05-24T17:14:00+00:00",
+      "updated_text": "24 May 2026 @ 17:14 UTC 2 hours ago"
     },
     {
       "title": "StarGen",
@@ -55,7 +87,7 @@
         "Code"
       ],
       "updated_at": "2026-05-13T18:59:00+00:00",
-      "updated_text": "13 May 2026 @ 18:59 UTC 10 days ago"
+      "updated_text": "13 May 2026 @ 18:59 UTC 11 days ago"
     },
     {
       "title": "Project Harvest",
@@ -88,7 +120,7 @@
         "Text"
       ],
       "updated_at": "2026-05-07T16:00:00+00:00",
-      "updated_text": "07 May 2026 @ 16:00 UTC 16 days ago"
+      "updated_text": "07 May 2026 @ 16:00 UTC 17 days ago"
     },
     {
       "title": "Loot, Luck & Liability",

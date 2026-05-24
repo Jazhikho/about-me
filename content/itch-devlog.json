@@ -1,7 +1,15 @@
 {
-  "generated_at": "2026-05-24T13:59:26.259020+00:00",
+  "generated_at": "2026-05-24T19:40:03.313986+00:00",
   "source_profile_url": "https://jazhikho.itch.io/",
   "discovered_projects": [
+    {
+      "title": "Untitled Map Game",
+      "slug": "untitled-map-game",
+      "url": "https://jazhikho.itch.io/untitled-map-game",
+      "description": "Chart a world tile by tile before HQ runs out of supplies and morale. Dispatch teams, manage a frontier, and survive.",
+      "cover_image": "https://img.itch.zone/aW1nLzI3NDMzODA5LnBuZw==/315x250%23c/xJz3sw.png",
+      "feed_url": "https://jazhikho.itch.io/untitled-map-game/devlog.rss"
+    },
     {
       "title": "Around the Bend",
       "slug": "around-the-bend",
