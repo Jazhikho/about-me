@@ -1,7 +1,15 @@
 {
-  "generated_at": "2026-06-01T12:08:56.970792+00:00",
+  "generated_at": "2026-06-01T18:15:31.400551+00:00",
   "source_profile_url": "https://jazhikho.itch.io/",
   "discovered_projects": [
+    {
+      "title": "Panda3D Prototypes",
+      "slug": "panda3d-prototypes",
+      "url": "https://jazhikho.itch.io/panda3d-prototypes",
+      "description": "Two prototype projects made with panda3d",
+      "cover_image": "",
+      "feed_url": "https://jazhikho.itch.io/panda3d-prototypes/devlog.rss"
+    },
     {
       "title": "Untitled Map Game",
       "slug": "untitled-map-game",
